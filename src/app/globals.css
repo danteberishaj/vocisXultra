@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/* ————————————————————————————————————————————————
+   vocisXultra — "morning rehearsal light"
+   Bright modern hall: pure white canvas, deep
+   harbor-blue accent, Inter throughout. See DESIGN.md.
+———————————————————————————————————————————————— */
+
+:root {
+  --canvas: oklch(1 0 0);
+  --panel: oklch(0.972 0.005 240);
+  --panel-2: oklch(0.945 0.008 240);
+  --ink: oklch(0.21 0.02 250);
+  --faint: oklch(0.47 0.02 250);
+  --accent: oklch(0.45 0.11 240);
+  --accent-deep: oklch(0.66 0.09 232);
+  --hairline: oklch(0.885 0.012 245);
+  --harbor: oklch(0.35 0.078 240);
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-panel: var(--panel);
+  --color-panel-2: var(--panel-2);
+  --color-ink: var(--ink);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
+  --color-hairline: var(--hairline);
+  --color-harbor: var(--harbor);
+
+  --font-display: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-inter), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: oklch(0.88 0.05 235);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+/* Display voice — Inter at confident weight, tight tracking.
+   :where() keeps specificity at zero so utilities still win. */
+:where(.font-display) {
+  font-weight: 650;
+  letter-spacing: -0.022em;
+}
+
+/* Long-form prose voice — Inter, patient measure */
+.prose-voice {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: clamp(1.05rem, 1rem + 0.25vw, 1.175rem);
+  line-height: 1.7;
+  max-width: 64ch;
+  text-wrap: pretty;
+}
+.prose-voice p + p {
+  margin-top: 1.4em;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.7rem 1.1rem;
+  background: var(--accent);
+  color: var(--canvas);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  transform: translateY(-200%);
+}
+.skip-link:focus-visible {
+  transform: none;
+}
+
+/* ——— Reveal choreography ———
+   Visible by default; the .js class (set inline in <head>)
+   arms the initial hidden state, IntersectionObserver adds .in.
+   Reduced motion: never hidden, no movement. */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition:
+    opacity 0.7s var(--ease-out-quart),
+    transform 0.7s var(--ease-out-quart);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.js [data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+.js [data-reveal="fade"] {
+  transform: none;
+  transition-duration: 1.1s;
+}
+.js [data-reveal="line"] {
+  transform: none;
+  clip-path: inset(0 100% 0 0);
+  transition:
+    clip-path 0.9s var(--ease-out-expo),
+    opacity 0.4s linear;
+  transition-delay: var(--reveal-delay, 0s);
+}
+.js [data-reveal="line"].in {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ——— Hero entrance (pure CSS, runs without JS) ——— */
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes slow-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.hero-rise {
+  animation: rise-in 1s var(--ease-out-quart) both;
+  animation-delay: var(--rise-delay, 0s);
+}
+.hero-fade {
+  animation: slow-fade 2.2s ease-out both;
+  animation-delay: var(--rise-delay, 0s);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-rise,
+  .hero-fade {
+    animation: none;
+  }
+  .js [data-reveal],
+  .js [data-reveal="line"] {
+    opacity: 1;
+    transform: none;
+    clip-path: none;
+    transition: none;
+  }
+}
