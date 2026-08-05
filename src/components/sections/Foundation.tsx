@@ -63,11 +63,19 @@ export function Foundation({ dict }: { dict: Dictionary }) {
         <Reveal>
           <Marker>{f.valuesHeading}</Marker>
         </Reveal>
-        <dl className="mt-10 grid gap-x-12 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-y-16">
+        <dl className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {f.values.map((value, i) => (
             <Reveal key={value.name} delay={(i % 3) * 80}>
-              <div>
-                <dt className="font-display text-2xl tracking-[-0.02em] text-ink">{value.name}</dt>
+              <div className="flex h-full flex-col bg-panel p-8 lg:p-9">
+                <span
+                  aria-hidden
+                  className="flex size-12 shrink-0 items-center justify-center rounded-full border border-hairline text-lg font-semibold text-accent"
+                >
+                  {i + 1}
+                </span>
+                <dt className="mt-6 font-display text-xl tracking-[-0.02em] text-ink">
+                  {value.name}
+                </dt>
                 <dd className="mt-3 text-base leading-relaxed text-faint">{value.text}</dd>
               </div>
             </Reveal>

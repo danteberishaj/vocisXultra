@@ -13,9 +13,7 @@ export function Events({ dict }: { dict: Dictionary }) {
         <SectionTitle className="max-w-[10ch]">{ev.heading}</SectionTitle>
       </Reveal>
       <Reveal delay={140}>
-        <p className="mt-7 max-w-[62ch] text-[1.05rem] leading-[1.75] text-faint lg:ml-[34%]">
-          {ev.lede}
-        </p>
+        <p className="mt-6 max-w-[58ch] text-[1.05rem] leading-[1.75] text-faint">{ev.lede}</p>
       </Reveal>
 
       {/* The empty season, said at full size — the honest centrepiece */}

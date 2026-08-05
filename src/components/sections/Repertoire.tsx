@@ -83,20 +83,15 @@ export function Repertoire({ dict }: { dict: Dictionary }) {
         <Reveal>
           <Marker>{r.activitiesHeading}</Marker>
         </Reveal>
-        <Reveal delay={130}>
-          <ul className="mt-7 text-[clamp(1.2rem,2.4vw,1.95rem)] leading-[1.5] tracking-[-0.015em] text-ink/85">
-            {r.activities.map((activity, i) => (
-              <li key={activity} className="inline">
-                {i > 0 && (
-                  <span aria-hidden className="text-accent-deep">
-                    {" · "}
-                  </span>
-                )}
-                {activity}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
+        {/* A list should look like a list — eight scannable lines, not one
+            long run-on set at display size. */}
+        <ul className="mt-8 grid border-t border-hairline sm:grid-cols-2 sm:gap-x-16 lg:grid-cols-3 lg:gap-x-12">
+          {r.activities.map((activity, i) => (
+            <Reveal key={activity} delay={(i % 3) * 60}>
+              <li className="border-b border-hairline py-4 text-base text-ink/85">{activity}</li>
+            </Reveal>
+          ))}
+        </ul>
       </div>
     </Section>
   );
