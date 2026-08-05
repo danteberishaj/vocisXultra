@@ -37,6 +37,9 @@ export const de: Dictionary = {
     repertoire: "Repertoire",
     events: "Veranstaltungen",
     contact: "Kontakt",
+    overview: "Überblick",
+    philosophy: "Philosophie",
+    eras: "Sechs Jahrhunderte",
   },
   hero: {
     name: "vocisXultra",

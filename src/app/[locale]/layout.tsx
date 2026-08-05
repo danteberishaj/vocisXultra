@@ -80,6 +80,12 @@ export default async function RootLayout({
     <html
       lang={locale as Locale}
       suppressHydrationWarning
+      // globals.css sets `scroll-behavior: smooth` so in-page anchor jumps
+      // glide. Next 16 no longer suppresses that during route transitions, so
+      // without this attribute switching locale animates a long smooth scroll
+      // and lands wherever the re-rendered content ends up — often the bottom.
+      // This restores the pre-16 behaviour: auto during navigation, smooth after.
+      data-scroll-behavior="smooth"
       className={`${inter.variable} antialiased`}
     >
       <head>

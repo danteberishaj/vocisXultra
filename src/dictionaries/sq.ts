@@ -37,6 +37,9 @@ export const sq: Dictionary = {
     repertoire: "Repertori",
     events: "Ngjarjet",
     contact: "Kontakti",
+    overview: "Përmbledhje",
+    philosophy: "Filozofia",
+    eras: "Gjashtë shekuj",
   },
   hero: {
     name: "vocisXultra",

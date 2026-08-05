@@ -35,6 +35,9 @@ export const en = {
     repertoire: "Repertoire",
     events: "Events",
     contact: "Contact",
+    overview: "Overview",
+    philosophy: "Philosophy",
+    eras: "Six Centuries",
   },
   hero: {
     name: "vocisXultra",

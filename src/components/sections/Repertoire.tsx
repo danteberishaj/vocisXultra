@@ -21,7 +21,7 @@ export function Repertoire({ dict }: { dict: Dictionary }) {
       </div>
 
       {/* Six centuries — the era name carries the weight, the period answers it */}
-      <ol className="mt-[clamp(3.5rem,9vh,6rem)]">
+      <ol id="eras" className="mt-[clamp(3.5rem,9vh,6rem)] scroll-mt-24">
         {r.eras.map((era, i) => (
           <li key={era.name} className="border-t border-hairline">
             <Reveal delay={Math.min(i * 60, 180)}>

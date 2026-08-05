@@ -16,11 +16,16 @@ export type NavEntry = { id: string; label: string; children: NavChild[] };
 export function buildNav(dict: Dictionary): NavEntry[] {
   const { nav, foundation, ensemble, repertoire, events } = dict;
 
+  // Each dropdown opens with "Overview" pointing at the section's own top, so
+  // the menu accounts for the whole section rather than starting partway down
+  // and leaving the opening content unreachable.
   return [
+    { id: "welcome", label: nav.welcome, children: [] },
     {
       id: "foundation",
       label: nav.foundation,
       children: [
+        { id: "foundation", label: nav.overview },
         { id: "mission", label: foundation.mission.heading },
         { id: "vision", label: foundation.vision.heading },
         { id: "values", label: foundation.valuesHeading },
@@ -31,7 +36,9 @@ export function buildNav(dict: Dictionary): NavEntry[] {
       id: "ensemble",
       label: nav.ensemble,
       children: [
+        { id: "ensemble", label: nav.overview },
         { id: "identity", label: ensemble.identityHeading },
+        { id: "philosophy", label: nav.philosophy },
         { id: "direction", label: ensemble.directionHeading },
         { id: "membership", label: ensemble.membership.heading },
         { id: "singers", label: ensemble.membership.rosterHeading },
@@ -41,6 +48,7 @@ export function buildNav(dict: Dictionary): NavEntry[] {
       id: "repertoire",
       label: nav.repertoire,
       children: [
+        { id: "eras", label: nav.eras },
         { id: "traditions", label: repertoire.traditions.heading },
         { id: "activities", label: repertoire.activitiesHeading },
       ],
