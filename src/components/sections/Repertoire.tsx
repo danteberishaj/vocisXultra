@@ -52,7 +52,7 @@ export function Repertoire({ dict }: { dict: Dictionary }) {
       </ol>
 
       {/* Sacred & secular — the score gets real size */}
-      <div className="mt-[clamp(5rem,13vh,9rem)] grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+      <div id="traditions" className="mt-[clamp(5rem,13vh,9rem)] grid scroll-mt-24 items-center gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
           <Reveal>
             <h3 className="max-w-[14ch] font-display text-[clamp(1.7rem,3.6vw,2.75rem)] leading-[1.08] tracking-[-0.025em] text-ink">
@@ -79,7 +79,7 @@ export function Repertoire({ dict }: { dict: Dictionary }) {
       </div>
 
       {/* Activities — one long breath of text across the full canvas */}
-      <div className="mt-[clamp(5rem,13vh,9rem)]">
+      <div id="activities" className="mt-[clamp(5rem,13vh,9rem)] scroll-mt-24">
         <Reveal>
           <Marker>{r.activitiesHeading}</Marker>
         </Reveal>

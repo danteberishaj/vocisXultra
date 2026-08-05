@@ -19,10 +19,8 @@ const escapeHtml = (value: string) =>
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 
-/** Pull a reply-to out of the free-text contact field, if the sender left one. */
-function findEmail(text: string): string | undefined {
-  return text.match(/[^\s<>()[\]]+@[^\s<>()[\]]+\.[a-z]{2,}/i)?.[0];
-}
+/** Deliberately permissive — reject the obviously malformed, not the unusual. */
+const EMAIL = /^[^\s<>()[\],;:@"]+@[^\s<>()[\],;:@"]+\.[a-z]{2,}$/i;
 
 export async function sendBooking(
   _previous: BookingState,
@@ -40,6 +38,9 @@ export async function sendBooking(
   for (const field of bookingFields) {
     const raw = ((formData.get(field.name) as string) ?? "").trim();
     if (field.required && raw === "") invalid.push(field.name);
+    // A malformed reply address is worth catching here: without it the
+    // Foundation has no way to answer the enquiry.
+    else if (field.type === "email" && raw !== "" && !EMAIL.test(raw)) invalid.push(field.name);
     values[field.name] = raw.slice(0, MAX_FIELD_LENGTH);
   }
 
@@ -60,7 +61,7 @@ export async function sendBooking(
     )
     .join("");
 
-  const replyTo = findEmail(values.contact);
+  const replyTo = values.senderEmail;
 
   try {
     const response = await fetch("https://api.resend.com/emails", {

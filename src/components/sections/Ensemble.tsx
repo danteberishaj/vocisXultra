@@ -60,7 +60,7 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
         </Reveal>
 
         {/* Three principles, wide and unboxed */}
-        <div className="mt-[clamp(5rem,13vh,9rem)]">
+        <div id="identity" className="mt-[clamp(5rem,13vh,9rem)] scroll-mt-24">
           <Reveal>
             <Marker>{e.identityHeading}</Marker>
           </Reveal>
@@ -80,7 +80,7 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
       </Section>
 
       {/* The still centre — the page's one centred moment */}
-      <div className="py-[clamp(3rem,10vh,7rem)] text-center">
+      <div id="philosophy" className="scroll-mt-24 py-[clamp(3rem,10vh,7rem)] text-center">
         <Shell>
           <Reveal variant="fade">
             <p aria-hidden className="font-serif text-2xl text-accent italic">
@@ -107,7 +107,7 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
 
       <Section>
         {/* Artistic direction — a tall portrait held against generous space */}
-        <div className="grid items-end gap-12 lg:grid-cols-12 lg:gap-16">
+        <div id="direction" className="grid scroll-mt-24 items-end gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal variant="fade" className="lg:col-span-5">
             <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl bg-panel">
               <Image
@@ -140,7 +140,7 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
         </div>
 
         {/* Membership */}
-        <div className="mt-[clamp(5rem,13vh,9rem)] lg:flex lg:items-start lg:justify-between lg:gap-16">
+        <div id="membership" className="mt-[clamp(5rem,13vh,9rem)] scroll-mt-24 lg:flex lg:items-start lg:justify-between lg:gap-16">
           <Reveal>
             <div className="max-w-2xl">
               <Marker>{e.membership.heading}</Marker>
@@ -163,7 +163,7 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
         </div>
 
         {/* Roster — faces and voice parts, nothing else. The names carry it. */}
-        <div className="mt-[clamp(5rem,13vh,9rem)]">
+        <div id="singers" className="mt-[clamp(5rem,13vh,9rem)] scroll-mt-24">
           <Reveal>
             <Marker>{e.membership.rosterHeading}</Marker>
           </Reveal>

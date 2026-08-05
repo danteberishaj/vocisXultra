@@ -50,7 +50,7 @@ export function Foundation({ dict }: { dict: Dictionary }) {
       {/* Mission sits left, vision answers from the right — the page breathes */}
       <div className="mt-[clamp(5rem,13vh,9rem)] space-y-[clamp(4rem,10vh,7rem)]">
         <Reveal>
-          <div className="max-w-3xl">
+          <div id="mission" className="max-w-3xl scroll-mt-24">
             <Marker>{f.mission.heading}</Marker>
             <div className="mt-5 space-y-5">
               {f.mission.body.map((p, i) =>
@@ -67,7 +67,7 @@ export function Foundation({ dict }: { dict: Dictionary }) {
         </Reveal>
 
         <Reveal>
-          <div className="max-w-3xl lg:ml-auto lg:text-right">
+          <div id="vision" className="max-w-3xl scroll-mt-24 lg:ml-auto lg:text-right">
             <Marker>{f.vision.heading}</Marker>
             <div className="mt-5 space-y-5">
               {f.vision.body.map((p, i) => (
@@ -79,7 +79,7 @@ export function Foundation({ dict }: { dict: Dictionary }) {
       </div>
 
       {/* Values — wide three-up, generous, no card chrome */}
-      <div className="mt-[clamp(5rem,13vh,9rem)]">
+      <div id="values" className="mt-[clamp(5rem,13vh,9rem)] scroll-mt-24">
         <Reveal>
           <Marker>{f.valuesHeading}</Marker>
         </Reveal>
@@ -107,7 +107,7 @@ export function Foundation({ dict }: { dict: Dictionary }) {
       </div>
 
       {/* Management — a portrait strip, staggered so it reads as a composition */}
-      <div className="mt-[clamp(5rem,13vh,9rem)]">
+      <div id="management" className="mt-[clamp(5rem,13vh,9rem)] scroll-mt-24">
         <Reveal>
           <Marker>{f.managementHeading}</Marker>
         </Reveal>

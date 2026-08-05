@@ -18,7 +18,10 @@ export const bookingFields = [
   { name: "duration", type: "text", required: false, emailLabel: "Expected programme duration" },
   { name: "technical", type: "textarea", required: false, emailLabel: "Technical requirements" },
   { name: "budget", type: "text", required: false, emailLabel: "Budget" },
-  { name: "contact", type: "textarea", required: true, emailLabel: "Contact details" },
+  // The reply address. Required and typed, so replies do not depend on
+  // scraping an address out of free-form contact text.
+  { name: "senderEmail", type: "email", required: true, emailLabel: "Email" },
+  { name: "contact", type: "textarea", required: false, emailLabel: "Contact details" },
 ] as const;
 
 export type BookingField = (typeof bookingFields)[number];

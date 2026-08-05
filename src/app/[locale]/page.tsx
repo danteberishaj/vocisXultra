@@ -22,7 +22,7 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
       <a href="#main" className="skip-link">
         {dict.a11y.skip}
       </a>
-      <SiteNav locale={locale} nav={dict.nav} a11y={dict.a11y} />
+      <SiteNav locale={locale} dict={dict} />
       <main id="main">
         <Hero dict={dict} />
         <Welcome dict={dict} />

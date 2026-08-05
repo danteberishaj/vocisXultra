@@ -19,7 +19,7 @@ export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
       </Reveal>
 
       {/* The empty season, said at full size — the honest centrepiece */}
-      <div className="mt-[clamp(4rem,11vh,8rem)] border-t border-hairline pt-12">
+      <div id="upcoming" className="mt-[clamp(4rem,11vh,8rem)] scroll-mt-24 border-t border-hairline pt-12">
         <Reveal>
           <Marker>{ev.upcoming.heading}</Marker>
         </Reveal>
@@ -59,7 +59,7 @@ export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
         </div>
       </div>
 
-      <div className="mt-[clamp(3.5rem,9vh,6rem)] border-t border-hairline pt-10">
+      <div id="past" className="mt-[clamp(3.5rem,9vh,6rem)] scroll-mt-24 border-t border-hairline pt-10">
         <Reveal>
           <div className="lg:flex lg:gap-16">
             <Marker className="shrink-0 lg:w-48">{ev.past.heading}</Marker>
@@ -98,7 +98,7 @@ export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
       </div>
 
       {/* Bookings — the practical close */}
-      <div className="mt-[clamp(5rem,13vh,9rem)] grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div id="bookings" className="mt-[clamp(5rem,13vh,9rem)] grid scroll-mt-24 gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-5">
           <Reveal>
             <Statement className="max-w-[14ch]">{ev.booking.heading}</Statement>

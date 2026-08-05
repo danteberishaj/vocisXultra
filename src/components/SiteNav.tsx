@@ -5,24 +5,17 @@ import Link from "next/link";
 import { Wordmark } from "@/components/Wordmark";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { IconClose, IconMenu } from "@/components/icons";
+import { buildNav, type NavEntry } from "@/lib/nav";
 import { locales, localeNames, type Locale } from "@/lib/locales";
 import type { Dictionary } from "@/dictionaries/en";
 
 type SiteNavProps = {
   locale: Locale;
-  nav: Dictionary["nav"];
-  a11y: Pick<Dictionary["a11y"], "menuOpen" | "menuClose" | "langLabel">;
+  dict: Dictionary;
 };
 
-const sections = [
-  ["foundation", "foundation"],
-  ["ensemble", "ensemble"],
-  ["repertoire", "repertoire"],
-  ["events", "events"],
-  ["contact", "contact"],
-] as const;
-
-export function SiteNav({ locale, nav, a11y }: SiteNavProps) {
+export function SiteNav({ locale, dict }: SiteNavProps) {
+  const nav = buildNav(dict);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -61,8 +54,6 @@ export function SiteNav({ locale, nav, a11y }: SiteNavProps) {
     };
   }, [open, close]);
 
-  const label = (key: (typeof sections)[number][1]) => nav[key];
-
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-colors duration-500 ${
@@ -83,18 +74,12 @@ export function SiteNav({ locale, nav, a11y }: SiteNavProps) {
         </Link>
 
         {/* Desktop */}
-        <nav className="hidden items-center gap-7 lg:flex" aria-label={nav.welcome}>
-          {sections.map(([id, key]) => (
-            <a
-              key={id}
-              href={`#${id}`}
-              className="font-sans text-[0.8rem] font-medium tracking-[0.14em] uppercase text-faint transition-colors hover:text-ink focus-visible:text-ink"
-            >
-              {label(key)}
-            </a>
+        <nav className="hidden items-center gap-7 lg:flex" aria-label={dict.nav.welcome}>
+          {nav.map((entry) => (
+            <DesktopItem key={entry.id} entry={entry} />
           ))}
           <span aria-hidden className="h-4 w-px bg-hairline" />
-          <LocaleSwitcher current={locale} label={a11y.langLabel} />
+          <LocaleSwitcher current={locale} label={dict.a11y.langLabel} />
         </nav>
 
         {/* Mobile trigger */}
@@ -104,14 +89,15 @@ export function SiteNav({ locale, nav, a11y }: SiteNavProps) {
           className="-mr-2 flex h-11 w-11 items-center justify-center text-ink lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-menu"
-          aria-label={open ? a11y.menuClose : a11y.menuOpen}
+          aria-label={open ? dict.a11y.menuClose : dict.a11y.menuOpen}
           onClick={() => setOpen((v) => !v)}
         >
           <IconMenu />
         </button>
       </div>
 
-      {/* Mobile overlay */}
+      {/* Mobile overlay — subsections are listed inline rather than hidden
+          behind a hover that touch devices do not have. */}
       <div
         id="mobile-menu"
         role="dialog"
@@ -128,33 +114,101 @@ export function SiteNav({ locale, nav, a11y }: SiteNavProps) {
             ref={closeButtonRef}
             type="button"
             className="-mr-2 flex h-11 w-11 items-center justify-center text-ink"
-            aria-label={a11y.menuClose}
+            aria-label={dict.a11y.menuClose}
             onClick={close}
           >
             <IconClose />
           </button>
         </div>
+
         <nav
-          className="mx-auto flex w-full max-w-[84rem] flex-1 flex-col justify-center gap-1 px-6 sm:px-10 lg:px-16"
-          aria-label={nav.welcome}
+          className="mx-auto w-full max-w-[84rem] flex-1 overflow-y-auto px-6 pb-10 sm:px-10"
+          aria-label={dict.nav.welcome}
         >
-          {sections.map(([id, key], i) => (
-            <a
-              key={id}
-              href={`#${id}`}
-              onClick={close}
-              className="border-b border-hairline/40 py-4 font-display text-3xl text-ink transition-colors hover:text-accent"
-              style={{ transitionDelay: open ? `${i * 30}ms` : "0ms" }}
-            >
-              {label(key)}
-            </a>
+          {nav.map((entry) => (
+            <div key={entry.id} className="border-b border-hairline/60 py-5">
+              <a
+                href={`#${entry.id}`}
+                onClick={close}
+                className="block font-display text-2xl text-ink transition-colors hover:text-accent"
+              >
+                {entry.label}
+              </a>
+              {entry.children.length > 0 && (
+                <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1.5">
+                  {entry.children.map((child) => (
+                    <li key={child.id}>
+                      <a
+                        href={`#${child.id}`}
+                        onClick={close}
+                        className="inline-flex min-h-9 items-center font-sans text-sm text-faint transition-colors hover:text-accent"
+                      >
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
           ))}
         </nav>
-        <div className="mx-auto w-full max-w-[84rem] px-6 pb-12 sm:px-10 lg:px-16">
-          <LocaleSwitcher current={locale} label={a11y.langLabel} large />
+
+        <div className="mx-auto w-full max-w-[84rem] px-6 pb-12 sm:px-10">
+          <LocaleSwitcher current={locale} label={dict.a11y.langLabel} large />
         </div>
       </div>
     </header>
+  );
+}
+
+/**
+ * One desktop nav entry and its dropdown.
+ *
+ * Opening is driven by CSS `group-hover` *and* `group-focus-within`, so a
+ * pointer and a keyboard both reach it — hover alone would strand anyone
+ * tabbing through. The panel sits in normal flow beneath the header, which has
+ * no clipping ancestor, so nothing gets cut off.
+ *
+ * The parent stays a plain link to the section: the dropdown supplements it
+ * rather than trapping the top-level destination behind a menu.
+ */
+function DesktopItem({ entry }: { entry: NavEntry }) {
+  const linkClass =
+    "font-sans text-[0.8rem] font-medium tracking-[0.14em] uppercase text-faint transition-colors hover:text-ink focus-visible:text-ink";
+
+  if (entry.children.length === 0) {
+    return (
+      <a href={`#${entry.id}`} className={linkClass}>
+        {entry.label}
+      </a>
+    );
+  }
+
+  return (
+    <div className="group relative">
+      <a href={`#${entry.id}`} className={`${linkClass} inline-flex h-16 items-center`}>
+        {entry.label}
+      </a>
+
+      <div
+        // Hidden from assistive tech only while closed; `invisible` also keeps
+        // the links out of the tab order until the panel is reachable.
+        className="invisible absolute top-full left-1/2 z-10 -translate-x-1/2 pt-0 opacity-0 transition-[opacity,transform] duration-200 ease-out group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 -translate-y-1"
+      >
+        <ul className="min-w-52 rounded-2xl border border-hairline bg-canvas p-2 shadow-[0_18px_40px_-24px_oklch(0.35_0.078_240_/_0.45)]">
+          {entry.children.map((child) => (
+            <li key={child.id}>
+              <a
+                href={`#${child.id}`}
+                className="block rounded-xl px-4 py-2.5 font-sans text-sm whitespace-nowrap text-faint transition-colors hover:bg-panel hover:text-ink focus-visible:bg-panel focus-visible:text-ink"
+              >
+                {child.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }
 

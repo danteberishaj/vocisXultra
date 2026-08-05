@@ -47,7 +47,7 @@ export function BookingForm({ locale, labels, form }: BookingFormProps) {
           const failed = state.invalid?.includes(field.name);
           const shared =
             "peer w-full border-0 border-b bg-transparent pb-2 text-[0.95rem] text-ink outline-none transition-colors placeholder:text-transparent focus:border-accent " +
-            (failed ? "border-red-600" : "border-hairline");
+            (failed ? "border-danger" : "border-hairline");
 
           return (
             <div key={field.name} className={field.type === "textarea" ? "sm:col-span-1" : ""}>
@@ -73,7 +73,9 @@ export function BookingForm({ locale, labels, form }: BookingFormProps) {
                 <input
                   id={field.name}
                   name={field.name}
-                  type="text"
+                  type={field.type === "email" ? "email" : "text"}
+                  autoComplete={field.type === "email" ? "email" : undefined}
+                  inputMode={field.type === "email" ? "email" : undefined}
                   required={field.required}
                   defaultValue={state.values?.[field.name] ?? ""}
                   aria-invalid={failed || undefined}
@@ -101,7 +103,7 @@ export function BookingForm({ locale, labels, form }: BookingFormProps) {
           role="status"
           aria-live="polite"
           className={`font-sans text-sm ${
-            state.status === "error" ? "text-red-700" : "text-accent"
+            state.status === "error" ? "text-danger" : "text-accent"
           }`}
         >
           {state.status === "success" && form.success}

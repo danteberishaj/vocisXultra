@@ -18,6 +18,9 @@
   --accent-deep: oklch(0.66 0.09 232);
   --hairline: oklch(0.885 0.012 245);
   --harbor: oklch(0.35 0.078 240);
+  /* Validation errors. The theme defines its own palette, so Tailwind's
+     default reds are not generated — error styling must come from here. */
+  --danger: oklch(0.52 0.19 25);
 }
 
 @theme inline {
@@ -30,6 +33,7 @@
   --color-accent-deep: var(--accent-deep);
   --color-hairline: var(--hairline);
   --color-harbor: var(--harbor);
+  --color-danger: var(--danger);
 
   --font-display: var(--font-inter), system-ui, sans-serif;
   --font-serif: var(--font-inter), system-ui, sans-serif;
