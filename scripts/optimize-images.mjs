@@ -38,6 +38,20 @@ for (const [src, out, width] of scenes) {
   );
 }
 
+// Scene photography that arrives as fresh source art, in public/images/src/.
+const scenes2 = [
+  ["welcome.png", "welcome.webp", 2200, 1238],
+  ["upcoming.png", "upcoming.webp", 1000, 1333],
+  ["past-1.png", "past-1.webp", 1200, 900],
+  ["past-2.png", "past-2.webp", 1200, 900],
+  ["past-3.png", "past-3.webp", 1200, 900],
+];
+for (const [src, out, w, h] of scenes2) {
+  await convert(`${images}/src/${src}`, `${images}/${out}`, (s) =>
+    s.resize({ width: w, height: h, fit: "cover" }).webp({ quality: 84, effort: 6 }),
+  );
+}
+
 // Portraits — management + ensemble members, 3:4, at 2x the largest render size
 const portraits = [
   ["m1", "management-1"],

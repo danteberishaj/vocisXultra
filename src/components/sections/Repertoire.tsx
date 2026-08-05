@@ -66,7 +66,7 @@ export function Repertoire({ dict }: { dict: Dictionary }) {
           </Reveal>
         </div>
         <Reveal variant="fade" className="lg:col-span-5">
-          <div className="relative aspect-4/5 w-full overflow-hidden bg-panel">
+          <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl bg-panel">
             <Image
               src="/images/score.webp"
               alt={dict.a11y.scoreImageAlt}

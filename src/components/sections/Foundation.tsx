@@ -120,7 +120,7 @@ export function Foundation({ dict }: { dict: Dictionary }) {
           {f.people.map((person, i) => (
             <li key={person.name} className={i % 2 === 1 ? "lg:mt-16" : undefined}>
               <Reveal delay={(i % 4) * 90}>
-                <div className="relative aspect-3/4 w-full overflow-hidden bg-panel">
+                <div className="relative aspect-3/4 w-full overflow-hidden rounded-2xl bg-panel">
                   <Image
                     src={managementPortraits[i]}
                     alt={`${person.name} — ${person.role}`}

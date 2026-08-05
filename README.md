@@ -54,35 +54,31 @@ Two blocks of the page are scaffolding, not real data. **Both must be replaced b
 
 The mapping from a person to their portrait lives in [`src/lib/portraits.ts`](src/lib/portraits.ts) and is **positional** — the Nth entry there matches the Nth person in the dictionary arrays. Add or remove people in both places together.
 
-## Image slots (reserved space for future photography)
+## Photography
 
-Five spots on the page reserve space for photographs that don't exist yet. Each states the aspect ratio and the pixel size to supply, so filling one is a drop-in.
+Every image on the page is an **AI-generated placeholder**. They are stylistically consistent — bright daylight, modern secular concert halls, airy and pale — but none of them shows the real ensemble. Swap them for real photographs before launch.
 
-| Where | Ratio | Supply | For |
-|---|---|---|---|
-| Welcome | 16:9 | 2560 × 1440 | Establishing shot of the ensemble in performance |
-| Events → Upcoming | 3:4 | 1200 × 1600 | Poster or photo for the first announced concert |
-| Events → Past | 4:3 | 1600 × 1200 | Concert photograph (×3, the performance archive) |
+| File | Ratio | Where |
+|---|---|---|
+| `hero.webp` | 16:9 | Hero (full-bleed) |
+| `welcome.webp` | 16:9 | Welcome |
+| `rehearsal.webp` | 3:2 | Ensemble band (full-bleed) |
+| `conductor.webp` | 3:4 | Artistic Direction |
+| `score.webp` | 1:1 | Repertoire, Sacred & Secular |
+| `upcoming.webp` | 3:4 | Events → Upcoming |
+| `past-1/2/3.webp` | 4:3 | Events → Past |
+| `team/management-1…4.webp` | 3:4 | Foundation → Management |
+| `team/member-1…8.webp` | 3:4 | The Singers |
 
-List every remaining slot with:
+To replace one: drop the new source into `public/images/src/`, register it in [`scripts/optimize-images.mjs`](scripts/optimize-images.mjs), run `node scripts/optimize-images.mjs`, and update the alt text in all three dictionaries. The script is re-runnable and skips any step whose source is missing, so removing bulky originals afterwards is safe.
 
-```bash
-grep -rn "data-image-slot" src
-```
+**Alt text lives in the dictionaries** (`a11y.*ImageAlt`), never inline — it is content and must be translated.
 
-To fill one, replace the whole `<ImageSlot … />` with a real image and **write descriptive alt text** (an empty slot is `aria-hidden`; a real photograph must not be):
-
-```tsx
-<div className="relative aspect-video w-full overflow-hidden bg-panel">
-  <Image src="/images/concert.webp" alt="…" fill sizes="100vw" className="object-cover" />
-</div>
-```
-
-Add new source images to `public/images/`, register them in `scripts/optimize-images.mjs`, then run `node scripts/optimize-images.mjs`. Slot labels are English-only — they address whoever supplies the photo, not visitors, and disappear as slots get filled.
+House style, if you commission or shoot replacements: daylight, pale minimal architecture, generous negative space, dark concert attire, nothing liturgical. Contained images carry `rounded-2xl`; the two full-bleed ones (hero, ensemble band) stay square because they meet the viewport edges.
 
 ## Before going live (placeholders to replace)
 
-- [ ] Fill or delete all five image slots (`grep -rn "data-image-slot" src`)
+- [ ] Replace every photograph with real imagery (see Photography above)
 
 - [ ] Real headshots for management + singers, and the real roster (see above)
 - [ ] `info@vocisxultra.org` — email in all three dictionaries

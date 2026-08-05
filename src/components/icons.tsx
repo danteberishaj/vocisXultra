@@ -108,16 +108,6 @@ export function IconSpark(props: IconProps) {
   );
 }
 
-export function IconImage(props: IconProps) {
-  return (
-    <svg viewBox="0 0 24 24" width={22} height={22} {...base} {...props}>
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <circle cx="8.75" cy="10" r="1.4" />
-      <path d="M21 15.5l-4.8-4.6L9 18" />
-    </svg>
-  );
-}
-
 export function IconInstagram(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" width={20} height={20} {...base} {...props}>

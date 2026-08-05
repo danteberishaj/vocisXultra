@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
-import { ImageSlot } from "@/components/ImageSlot";
 import { Marker, Section, Statement } from "@/components/Layout";
 import type { Dictionary } from "@/dictionaries/en";
 
@@ -27,12 +27,15 @@ export function Welcome({ dict }: { dict: Dictionary }) {
       </div>
 
       <Reveal variant="fade">
-        <ImageSlot
-          ratio="aspect-video"
-          label="Establishing photograph — the ensemble in performance"
-          hint="2560 × 1440"
-          className="mt-[clamp(4rem,10vh,7rem)]"
-        />
+        <div className="relative mt-[clamp(4rem,10vh,7rem)] aspect-video w-full overflow-hidden rounded-2xl bg-panel">
+          <Image
+            src="/images/welcome.webp"
+            alt={dict.a11y.welcomeImageAlt}
+            fill
+            sizes="(min-width: 1024px) 76rem, 100vw"
+            className="object-cover"
+          />
+        </div>
       </Reveal>
 
       <div className="mt-[clamp(4rem,10vh,7rem)]">

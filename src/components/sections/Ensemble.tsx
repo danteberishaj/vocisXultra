@@ -109,7 +109,7 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
         {/* Artistic direction — a tall portrait held against generous space */}
         <div className="grid items-end gap-12 lg:grid-cols-12 lg:gap-16">
           <Reveal variant="fade" className="lg:col-span-5">
-            <div className="relative aspect-4/5 w-full overflow-hidden bg-panel">
+            <div className="relative aspect-4/5 w-full overflow-hidden rounded-2xl bg-panel">
               <Image
                 src="/images/conductor.webp"
                 alt={dict.a11y.conductorImageAlt}

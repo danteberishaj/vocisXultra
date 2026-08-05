@@ -18,6 +18,15 @@ export const en = {
       "An open choral score on a white table in soft daylight, a pencil resting on the page",
     conductorImageAlt:
       "A conductor's raised hands holding a baton against a bright, softly blurred concert hall",
+    welcomeImageAlt:
+      "The ensemble performing in a bright modern concert hall, tall windows along the wall behind them",
+    upcomingImageAlt:
+      "Singers with open scores during a performance, seen past the conductor's shoulder",
+    pastImageAlts: [
+      "The ensemble taking a bow at the end of a concert",
+      "Singers mid-performance, open scores in hand",
+      "The empty hall after a concert, music stands and scores still in place",
+    ],
   },
   nav: {
     welcome: "Welcome",

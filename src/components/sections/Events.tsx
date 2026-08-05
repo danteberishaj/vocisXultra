@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
-import { ImageSlot } from "@/components/ImageSlot";
 import { Marker, Section, SectionTitle, Statement } from "@/components/Layout";
 import { IconArrowUpRight } from "@/components/icons";
 import type { Dictionary } from "@/dictionaries/en";
@@ -44,11 +44,15 @@ export function Events({ dict }: { dict: Dictionary }) {
             </Reveal>
           </div>
           <Reveal variant="fade" delay={160} className="lg:col-span-4 lg:col-start-9">
-            <ImageSlot
-              ratio="aspect-3/4"
-              label="Poster or photograph for the first announced concert"
-              hint="1200 × 1600"
-            />
+            <div className="relative aspect-3/4 w-full overflow-hidden rounded-2xl bg-panel">
+              <Image
+                src="/images/upcoming.webp"
+                alt={dict.a11y.upcomingImageAlt}
+                fill
+                sizes="(min-width: 1024px) 22rem, 90vw"
+                className="object-cover"
+              />
+            </div>
           </Reveal>
         </div>
       </div>
@@ -64,9 +68,17 @@ export function Events({ dict }: { dict: Dictionary }) {
         </Reveal>
         {/* Where the performance archive accumulates */}
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {["Concert photograph", "Concert photograph", "Concert photograph"].map((label, i) => (
-            <Reveal key={i} variant="fade" delay={i * 90}>
-              <ImageSlot ratio="aspect-4/3" label={label} hint="1600 × 1200" />
+          {dict.a11y.pastImageAlts.map((alt, i) => (
+            <Reveal key={alt} variant="fade" delay={i * 90}>
+              <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-panel">
+                <Image
+                  src={`/images/past-${i + 1}.webp`}
+                  alt={alt}
+                  fill
+                  sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw"
+                  className="object-cover"
+                />
+              </div>
             </Reveal>
           ))}
         </div>

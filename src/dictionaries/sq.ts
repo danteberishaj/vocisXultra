@@ -20,6 +20,15 @@ export const sq: Dictionary = {
       "Një partiturë korale e hapur mbi një tavolinë të bardhë në dritë të butë dite, me një laps mbi faqe",
     conductorImageAlt:
       "Duart e ngritura të një dirigjenti me bagetë përballë një salle koncertale të ndritshme, të turbulluar butësisht",
+    welcomeImageAlt:
+      "Ansambli duke interpretuar në një sallë moderne koncertale të ndritshme, me dritare të larta përgjatë murit pas tyre",
+    upcomingImageAlt:
+      "Këngëtarë me partitura të hapura gjatë një interpretimi, parë përtej shpatullës së dirigjentit",
+    pastImageAlts: [
+      "Ansambli duke përshëndetur publikun në fund të një koncerti",
+      "Këngëtarë në mes të interpretimit, me partitura të hapura në duar",
+      "Salla bosh pas një koncerti, me stenda notash dhe partitura ende në vend",
+    ],
   },
   nav: {
     welcome: "Mirë se vini",

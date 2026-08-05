@@ -20,6 +20,15 @@ export const de: Dictionary = {
       "Eine aufgeschlagene Chorpartitur auf einem weißen Tisch in weichem Tageslicht, ein Bleistift liegt auf der Seite",
     conductorImageAlt:
       "Die erhobenen Hände eines Dirigenten mit Taktstock vor einem hellen, sanft unscharfen Konzertsaal",
+    welcomeImageAlt:
+      "Das Ensemble bei einer Aufführung in einem hellen modernen Konzertsaal, hohe Fenster entlang der Wand dahinter",
+    upcomingImageAlt:
+      "Sängerinnen und Sänger mit aufgeschlagenen Noten während einer Aufführung, über die Schulter des Dirigenten gesehen",
+    pastImageAlts: [
+      "Das Ensemble verbeugt sich am Ende eines Konzerts",
+      "Sängerinnen und Sänger mitten in der Aufführung, mit aufgeschlagenen Noten",
+      "Der leere Saal nach einem Konzert, Notenpulte und Partituren noch an ihrem Platz",
+    ],
   },
   nav: {
     welcome: "Willkommen",
