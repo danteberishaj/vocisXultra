@@ -342,6 +342,14 @@ export const en = {
       ],
       note: "We respond promptly to discuss artistic possibilities.",
       cta: "Enquire about a booking",
+      form: {
+        submit: "Send enquiry",
+        sending: "Sending…",
+        success: "Thank you — your enquiry is on its way.",
+        error: "Something went wrong. Please try again, or write to us directly.",
+        missingFields: "Please complete the required fields.",
+        requiredNote: "Fields marked * are required.",
+      },
     },
   },
   contact: {

@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
+import { BookingForm } from "@/components/BookingForm";
 import { Marker, Section, SectionTitle, Statement } from "@/components/Layout";
 import { IconArrowUpRight } from "@/components/icons";
+import type { Locale } from "@/lib/locales";
 import type { Dictionary } from "@/dictionaries/en";
 
-export function Events({ dict }: { dict: Dictionary }) {
+export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const ev = dict.events;
 
   return (
@@ -106,27 +108,17 @@ export function Events({ dict }: { dict: Dictionary }) {
               {ev.booking.intro}
             </p>
           </Reveal>
-          <Reveal delay={280}>
-            <a
-              href={`mailto:${dict.contact.email}?subject=${encodeURIComponent(ev.booking.heading)}`}
-              className="mt-8 inline-flex min-h-11 items-center border border-accent-deep px-7 font-sans text-[0.82rem] font-medium tracking-[0.16em] uppercase text-ink transition-colors duration-300 hover:border-accent hover:text-accent"
-            >
-              {ev.booking.cta}
-            </a>
+          <Reveal delay={200}>
+            <p className="mt-7 text-base text-faint italic">{ev.booking.note}</p>
           </Reveal>
         </div>
         <div className="lg:col-span-6 lg:col-start-7">
-          <ul className="grid sm:grid-cols-2 sm:gap-x-12">
-            {ev.booking.checklist.map((item, i) => (
-              <Reveal key={item} delay={i * 55}>
-                <li className="border-b border-hairline py-4 font-sans text-sm text-ink/90">
-                  {item}
-                </li>
-              </Reveal>
-            ))}
-          </ul>
-          <Reveal delay={200}>
-            <p className="mt-7 text-base text-faint italic">{ev.booking.note}</p>
+          <Reveal delay={120}>
+            <BookingForm
+              locale={locale}
+              labels={ev.booking.checklist}
+              form={ev.booking.form}
+            />
           </Reveal>
         </div>
       </div>

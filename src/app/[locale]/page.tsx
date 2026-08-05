@@ -29,7 +29,7 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
         <Foundation dict={dict} />
         <Ensemble dict={dict} />
         <Repertoire dict={dict} />
-        <Events dict={dict} />
+        <Events dict={dict} locale={locale} />
       </main>
       <SiteFooter dict={dict} />
     </>

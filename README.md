@@ -78,6 +78,23 @@ To replace one: drop the new source into `public/images/src/`, register it in [`
 
 House style, if you commission or shoot replacements: daylight, pale minimal architecture, generous negative space, dark concert attire, nothing liturgical. Contained images carry `rounded-2xl`; the two full-bleed ones (hero, ensemble band) stay square because they meet the viewport edges.
 
+## Booking form
+
+The Bookings section is a real form, not a mailto. It posts to a Server Action
+([`src/app/actions/send-booking.ts`](src/app/actions/send-booking.ts)) which sends the enquiry to `vocisxultra@gmail.com` via Resend.
+
+**It needs one credential before it will send anything.** Until then the form renders and validates normally, but submitting shows the error message and logs `[booking] RESEND_API_KEY is not set`.
+
+1. Create a Resend account at <https://resend.com> using **vocisxultra@gmail.com**
+2. Copy an API key into `.env.local` as `RESEND_API_KEY` (see [`.env.example`](.env.example))
+3. Add the same variable in **Vercel → Project → Settings → Environment Variables**, then redeploy
+
+Until a domain is verified in Resend, the default sender `onboarding@resend.dev` only delivers to the address that owns the account — enough to test. Once `vocisxultra.org` is verified, set `CONTACT_FROM_EMAIL`.
+
+The eight field labels come from `events.booking.checklist` in the dictionaries, so they are already translated; the field names and types live in [`src/lib/booking-fields.ts`](src/lib/booking-fields.ts) and are matched positionally. Change one and change the other. The email itself is always composed in English so the Foundation reads a consistent enquiry whatever language the sender used.
+
+Includes a honeypot field, a 2000-character cap per field, server-side validation of the required fields, and a reply-to pulled from the contact details when an address is present. There is **no rate limiting** — worth adding if it attracts spam.
+
 ## Before going live (placeholders to replace)
 
 - [ ] Replace every photograph with real imagery (see Photography above)

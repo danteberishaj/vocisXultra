@@ -344,6 +344,14 @@ export const de: Dictionary = {
       ],
       note: "Wir antworten zeitnah, um künstlerische Möglichkeiten zu besprechen.",
       cta: "Buchung anfragen",
+      form: {
+        submit: "Anfrage senden",
+        sending: "Wird gesendet…",
+        success: "Vielen Dank — Ihre Anfrage ist unterwegs.",
+        error: "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt.",
+        missingFields: "Bitte füllen Sie die Pflichtfelder aus.",
+        requiredNote: "Mit * markierte Felder sind Pflichtfelder.",
+      },
     },
   },
   contact: {

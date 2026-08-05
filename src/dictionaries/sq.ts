@@ -344,6 +344,14 @@ export const sq: Dictionary = {
       ],
       note: "Përgjigjemi me përpikëri për të diskutuar mundësitë artistike.",
       cta: "Pyesni për një rezervim",
+      form: {
+        submit: "Dërgo kërkesën",
+        sending: "Duke dërguar…",
+        success: "Faleminderit — kërkesa juaj sapo u nis.",
+        error: "Diçka shkoi keq. Ju lutemi provoni sërish ose na shkruani drejtpërdrejt.",
+        missingFields: "Ju lutemi plotësoni fushat e detyrueshme.",
+        requiredNote: "Fushat e shënuara me * janë të detyrueshme.",
+      },
     },
   },
   contact: {
