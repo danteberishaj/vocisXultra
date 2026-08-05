@@ -350,7 +350,7 @@ export const de: Dictionary = {
     heading: "Kontakt",
     lede: "Für Konzerte, Kooperationen, Mitgliedschaft oder Presse.",
     emailLabel: "Schreiben Sie uns",
-    email: "info@vocisxultra.org",
+    email: "vocisxultra@gmail.com",
     socialHeading: "Folgen",
     impressum: {
       heading: "Impressum",
@@ -358,7 +358,7 @@ export const de: Dictionary = {
         "Fondacioni vocisXultra",
         "Unabhängige gemeinnützige Kulturstiftung",
         "Prishtina, Republik Kosovo",
-        "info@vocisxultra.org",
+        "vocisxultra@gmail.com",
       ],
       responsible: "Verantwortlich für den Inhalt: Stiftung vocisXultra",
     },

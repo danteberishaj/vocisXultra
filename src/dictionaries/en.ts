@@ -348,7 +348,7 @@ export const en = {
     heading: "Contact",
     lede: "For concerts, collaborations, membership or press.",
     emailLabel: "Write to us",
-    email: "info@vocisxultra.org",
+    email: "vocisxultra@gmail.com",
     socialHeading: "Follow",
     impressum: {
       heading: "Impressum",
@@ -356,7 +356,7 @@ export const en = {
         "Fondacioni vocisXultra",
         "Independent non-profit cultural foundation",
         "Prishtina, Republic of Kosovo",
-        "info@vocisxultra.org",
+        "vocisxultra@gmail.com",
       ],
       responsible: "Responsible for content: vocisXultra Foundation",
     },

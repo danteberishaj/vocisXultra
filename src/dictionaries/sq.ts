@@ -350,7 +350,7 @@ export const sq: Dictionary = {
     heading: "Kontakti",
     lede: "Për koncerte, bashkëpunime, anëtarësi ose media.",
     emailLabel: "Na shkruani",
-    email: "info@vocisxultra.org",
+    email: "vocisxultra@gmail.com",
     socialHeading: "Na ndiqni",
     impressum: {
       heading: "Impressum",
@@ -358,7 +358,7 @@ export const sq: Dictionary = {
         "Fondacioni vocisXultra",
         "Fondacion i pavarur kulturor jofitimprurës",
         "Prishtinë, Republika e Kosovës",
-        "info@vocisxultra.org",
+        "vocisxultra@gmail.com",
       ],
       responsible: "Përgjegjës për përmbajtjen: Fondacioni vocisXultra",
     },

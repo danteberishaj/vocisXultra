@@ -83,7 +83,7 @@ House style, if you commission or shoot replacements: daylight, pale minimal arc
 - [ ] Replace every photograph with real imagery (see Photography above)
 
 - [ ] Real headshots for management + singers, and the real roster (see above)
-- [ ] `info@vocisxultra.org` — email in all three dictionaries
+- [x] Contact email — `vocisxultra@gmail.com`, set in all three dictionaries (`contact.email` and the impressum block). Mailto links and the JSON-LD read from that field, so changing it there is enough.
 - [ ] `instagram.com/vocisxultra` / `facebook.com/vocisxultra` — `src/components/sections/SiteFooter.tsx` and JSON-LD in `src/app/[locale]/layout.tsx`
 - [ ] Domain `vocisxultra.org` — `metadataBase` + JSON-LD in `layout.tsx`, `src/app/sitemap.ts`, `src/app/robots.ts`
 - [ ] Have a native speaker review the Albanian and German copy
