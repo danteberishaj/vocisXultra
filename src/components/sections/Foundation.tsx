@@ -2,7 +2,25 @@ import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { Marker, Section, SectionTitle, Statement } from "@/components/Layout";
 import { managementPortraits } from "@/lib/portraits";
+import {
+  IconGlobe,
+  IconOpenBook,
+  IconOverlap,
+  IconShield,
+  IconSpark,
+  IconTuningFork,
+} from "@/components/icons";
 import type { Dictionary } from "@/dictionaries/en";
+
+/** One icon per value, in the order the values appear in the dictionaries. */
+const valueIcons = [
+  IconTuningFork, // Artistic Excellence
+  IconShield, // Integrity
+  IconOverlap, // Collaboration
+  IconOpenBook, // Education
+  IconGlobe, // Cultural Dialogue
+  IconSpark, // Innovation
+];
 
 export function Foundation({ dict }: { dict: Dictionary }) {
   const f = dict.foundation;
@@ -64,22 +82,25 @@ export function Foundation({ dict }: { dict: Dictionary }) {
           <Marker>{f.valuesHeading}</Marker>
         </Reveal>
         <dl className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-          {f.values.map((value, i) => (
-            <Reveal key={value.name} delay={(i % 3) * 80}>
-              <div className="flex h-full flex-col bg-panel p-8 lg:p-9">
-                <span
-                  aria-hidden
-                  className="flex size-12 shrink-0 items-center justify-center rounded-full border border-hairline text-lg font-semibold text-accent"
-                >
-                  {i + 1}
-                </span>
-                <dt className="mt-6 font-display text-xl tracking-[-0.02em] text-ink">
-                  {value.name}
-                </dt>
-                <dd className="mt-3 text-base leading-relaxed text-faint">{value.text}</dd>
-              </div>
-            </Reveal>
-          ))}
+          {f.values.map((value, i) => {
+            const Icon = valueIcons[i] ?? IconSpark;
+            return (
+              <Reveal key={value.name} delay={(i % 3) * 80}>
+                <div className="flex h-full flex-col rounded-2xl bg-panel p-8 lg:p-9">
+                  <span
+                    aria-hidden
+                    className="flex size-12 shrink-0 items-center justify-center rounded-full bg-canvas text-accent"
+                  >
+                    <Icon />
+                  </span>
+                  <dt className="mt-6 font-display text-xl tracking-[-0.02em] text-ink">
+                    {value.name}
+                  </dt>
+                  <dd className="mt-3 text-base leading-relaxed text-faint">{value.text}</dd>
+                </div>
+              </Reveal>
+            );
+          })}
         </dl>
       </div>
 

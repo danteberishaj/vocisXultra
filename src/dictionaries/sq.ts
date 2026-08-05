@@ -11,6 +11,7 @@ export const sq: Dictionary = {
     menuOpen: "Hap menynë",
     menuClose: "Mbyll menynë",
     langLabel: "Gjuha",
+    readBio: "Shfaq biografinë",
     heroImageAlt:
       "Një sallë koncertale moderne dhe e ndritshme në dritën e ditës — një skenë bosh prej druri të çelët me stenda notash dhe një piano me bisht nën dritare të larta",
     rehearsalImageAlt:
@@ -179,19 +180,55 @@ export const sq: Dictionary = {
       voices: [
         {
           part: "Soprano",
-          singers: [{ name: "Arta Krasniqi" }, { name: "Elira Berisha" }],
+          singers: [
+            {
+              name: "Arta Krasniqi",
+              bio: "Ka studiuar këndim në Universitetin e Prishtinës. E tërhequr nga polifonia e Rilindjes dhe praktika interpretuese e muzikës së hershme.",
+            },
+            {
+              name: "Elira Berisha",
+              bio: "Një zë themelues i ansamblit, aktive në muzikë kamertale dhe në projekte vokale bashkëkohore në rajon.",
+            },
+          ],
         },
         {
           part: "Alto",
-          singers: [{ name: "Donika Maloku" }, { name: "Rina Gashi" }],
+          singers: [
+            {
+              name: "Donika Maloku",
+              bio: "E formuar si pedagoge muzike, ndërthur këndimin koral me mësimdhënien për muzikantët e rinj në Prishtinë.",
+            },
+            {
+              name: "Rina Gashi",
+              bio: "E tërhequr nga repertori romantik, me një dashuri të veçantë për Brahmsin dhe Faurénë.",
+            },
+          ],
         },
         {
           part: "Tenor",
-          singers: [{ name: "Blerim Hoxha" }, { name: "Endrit Çela" }],
+          singers: [
+            {
+              name: "Blerim Hoxha",
+              bio: "Këndon rregullisht me ansamble kamertale në rajon, me një interes të qëndrueshëm për interpretimin historikisht të informuar.",
+            },
+            {
+              name: "Endrit Çela",
+              bio: "Erdhi te këndimi koral përmes studimeve instrumentale dhe sjell një interes të fortë për repertorin e shekullit XX.",
+            },
+          ],
         },
         {
           part: "Bas",
-          singers: [{ name: "Fatos Zeka" }, { name: "Granit Morina" }],
+          singers: [
+            {
+              name: "Fatos Zeka",
+              bio: "Korist me përvojë të gjatë në oratorio dhe në vepra të mëdha koralo-orkestrale.",
+            },
+            {
+              name: "Granit Morina",
+              bio: "Studion dirigjimin krahas këndimit në ansambël, me fokus në praktikën interpretuese barok.",
+            },
+          ],
         },
       ],
     },

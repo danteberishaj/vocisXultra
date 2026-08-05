@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { Marker, Section, SectionTitle, Shell, Statement } from "@/components/Layout";
+import { SingerCard } from "@/components/SingerCard";
 import { memberPortraits } from "@/lib/portraits";
 import type { Dictionary } from "@/dictionaries/en";
 
@@ -13,6 +14,7 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
   const roster = e.membership.voices.flatMap((voice, vi) =>
     voice.singers.map((singer, si) => ({
       name: singer.name,
+      bio: singer.bio,
       part: voice.part,
       portrait: memberPortraits[vi]?.[si] ?? "",
     })),
@@ -169,21 +171,13 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
             {roster.map((singer, i) => (
               <li key={singer.name}>
                 <Reveal delay={(i % 4) * 80}>
-                  <div className="relative aspect-3/4 w-full overflow-hidden bg-panel">
-                    <Image
-                      src={singer.portrait}
-                      alt={`${singer.name} — ${singer.part}`}
-                      fill
-                      sizes="(min-width: 1024px) 18rem, (min-width: 640px) 40vw, 85vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="mt-4 font-display text-lg tracking-[-0.02em] text-ink">
-                    {singer.name}
-                  </p>
-                  <p className="mt-1.5 font-sans text-xs tracking-[0.18em] uppercase text-accent">
-                    {singer.part}
-                  </p>
+                  <SingerCard
+                    name={singer.name}
+                    part={singer.part}
+                    bio={singer.bio}
+                    portrait={singer.portrait}
+                    toggleLabel={dict.a11y.readBio}
+                  />
                 </Reveal>
               </li>
             ))}

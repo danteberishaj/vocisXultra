@@ -9,6 +9,7 @@ export const en = {
     menuOpen: "Open menu",
     menuClose: "Close menu",
     langLabel: "Language",
+    readBio: "Show biography",
     heroImageAlt:
       "A bright modern concert hall in daylight — an empty light-wood stage with music stands and a grand piano beneath tall windows",
     rehearsalImageAlt:
@@ -177,19 +178,55 @@ export const en = {
       voices: [
         {
           part: "Soprano",
-          singers: [{ name: "Arta Krasniqi" }, { name: "Elira Berisha" }],
+          singers: [
+            {
+              name: "Arta Krasniqi",
+              bio: "Studied voice at the University of Prishtina. Drawn to renaissance polyphony and early-music performance practice.",
+            },
+            {
+              name: "Elira Berisha",
+              bio: "A founding voice of the ensemble, active in chamber music and contemporary vocal projects across the region.",
+            },
+          ],
         },
         {
           part: "Alto",
-          singers: [{ name: "Donika Maloku" }, { name: "Rina Gashi" }],
+          singers: [
+            {
+              name: "Donika Maloku",
+              bio: "Trained as a music educator, combining choral singing with teaching young musicians in Prishtina.",
+            },
+            {
+              name: "Rina Gashi",
+              bio: "Drawn to the romantic repertoire, with a particular love for Brahms and Fauré.",
+            },
+          ],
         },
         {
           part: "Tenor",
-          singers: [{ name: "Blerim Hoxha" }, { name: "Endrit Çela" }],
+          singers: [
+            {
+              name: "Blerim Hoxha",
+              bio: "Sings regularly with chamber ensembles across the region, with a lasting interest in historically informed performance.",
+            },
+            {
+              name: "Endrit Çela",
+              bio: "Came to choral singing through instrumental study, and brings a strong interest in twentieth-century repertoire.",
+            },
+          ],
         },
         {
           part: "Bass",
-          singers: [{ name: "Fatos Zeka" }, { name: "Granit Morina" }],
+          singers: [
+            {
+              name: "Fatos Zeka",
+              bio: "A long-standing chorister with experience in oratorio and large-scale choral-orchestral works.",
+            },
+            {
+              name: "Granit Morina",
+              bio: "Studies conducting alongside singing in the ensemble, with a focus on baroque performance practice.",
+            },
+          ],
         },
       ],
     },

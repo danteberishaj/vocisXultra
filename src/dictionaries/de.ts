@@ -11,6 +11,7 @@ export const de: Dictionary = {
     menuOpen: "Menü öffnen",
     menuClose: "Menü schließen",
     langLabel: "Sprache",
+    readBio: "Biografie anzeigen",
     heroImageAlt:
       "Ein heller moderner Konzertsaal bei Tageslicht — eine leere Bühne aus hellem Holz mit Notenpulten und einem Flügel unter hohen Fenstern",
     rehearsalImageAlt:
@@ -179,19 +180,55 @@ export const de: Dictionary = {
       voices: [
         {
           part: "Sopran",
-          singers: [{ name: "Arta Krasniqi" }, { name: "Elira Berisha" }],
+          singers: [
+            {
+              name: "Arta Krasniqi",
+              bio: "Studierte Gesang an der Universität Prishtina. Der Renaissance-Polyphonie und der historischen Aufführungspraxis zugetan.",
+            },
+            {
+              name: "Elira Berisha",
+              bio: "Eine Gründungsstimme des Ensembles, aktiv in der Kammermusik und in zeitgenössischen Vokalprojekten der Region.",
+            },
+          ],
         },
         {
           part: "Alt",
-          singers: [{ name: "Donika Maloku" }, { name: "Rina Gashi" }],
+          singers: [
+            {
+              name: "Donika Maloku",
+              bio: "Ausgebildete Musikpädagogin, die Chorgesang mit dem Unterrichten junger Musikerinnen und Musiker in Prishtina verbindet.",
+            },
+            {
+              name: "Rina Gashi",
+              bio: "Dem romantischen Repertoire zugetan, mit besonderer Vorliebe für Brahms und Fauré.",
+            },
+          ],
         },
         {
           part: "Tenor",
-          singers: [{ name: "Blerim Hoxha" }, { name: "Endrit Çela" }],
+          singers: [
+            {
+              name: "Blerim Hoxha",
+              bio: "Singt regelmäßig mit Kammerensembles in der Region, mit anhaltendem Interesse an historisch informierter Aufführungspraxis.",
+            },
+            {
+              name: "Endrit Çela",
+              bio: "Kam über das Instrumentalstudium zum Chorgesang und bringt starkes Interesse am Repertoire des 20. Jahrhunderts mit.",
+            },
+          ],
         },
         {
           part: "Bass",
-          singers: [{ name: "Fatos Zeka" }, { name: "Granit Morina" }],
+          singers: [
+            {
+              name: "Fatos Zeka",
+              bio: "Langjähriger Chorsänger mit Erfahrung im Oratorium und in großen chorsinfonischen Werken.",
+            },
+            {
+              name: "Granit Morina",
+              bio: "Studiert Dirigieren neben dem Singen im Ensemble, mit Schwerpunkt auf barocker Aufführungspraxis.",
+            },
+          ],
         },
       ],
     },

@@ -8,8 +8,10 @@
 
 :root {
   --canvas: oklch(1 0 0);
-  --panel: oklch(0.972 0.005 240);
-  --panel-2: oklch(0.945 0.008 240);
+  /* Raised surfaces sit ~6% off the white canvas and lean toward the brand
+     blue rather than neutral grey, so a card reads as a card without a border. */
+  --panel: oklch(0.962 0.014 245);
+  --panel-2: oklch(0.935 0.018 245);
   --ink: oklch(0.21 0.02 250);
   --faint: oklch(0.47 0.02 250);
   --accent: oklch(0.45 0.11 240);
@@ -101,6 +103,67 @@ h1, h2, h3, h4 {
 }
 .skip-link:focus-visible {
   transform: none;
+}
+
+/* ——— Singer portrait flip ———
+   Only the portrait flips; the name and voice part stay put beneath it, so
+   nothing reflows. Driven by hover, focus-within and an explicit
+   data-flipped state, so pointer, keyboard and touch each have a path. */
+.flip {
+  perspective: 1200px;
+}
+.flip-inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s var(--ease-out-quart);
+}
+.flip:hover .flip-inner,
+.flip:focus-within .flip-inner,
+.flip-inner[data-flipped="true"] {
+  transform: rotateY(180deg);
+}
+.flip-face {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: inherit;
+}
+.flip-back {
+  transform: rotateY(180deg);
+}
+
+/* Reduced motion: crossfade rather than rotate. */
+@media (prefers-reduced-motion: reduce) {
+  .flip-inner,
+  .flip:hover .flip-inner,
+  .flip:focus-within .flip-inner,
+  .flip-inner[data-flipped="true"] {
+    transform: none;
+    transition: none;
+  }
+  .flip-face {
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    transition: opacity 0.3s ease;
+  }
+  .flip-back {
+    transform: none;
+    opacity: 0;
+  }
+  .flip:hover .flip-back,
+  .flip:focus-within .flip-back,
+  .flip-inner[data-flipped="true"] .flip-back {
+    opacity: 1;
+  }
+  .flip:hover .flip-front,
+  .flip:focus-within .flip-front,
+  .flip-inner[data-flipped="true"] .flip-front {
+    opacity: 0;
+  }
 }
 
 /* ——— Reveal choreography ———
