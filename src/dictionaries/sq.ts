@@ -310,7 +310,24 @@ export const sq: Dictionary = {
     },
     past: {
       heading: "Të kaluara",
-      emptyText: "Koncertet, bashkëpunimet, festivalet dhe incizimet do të dokumentohen këtu.",
+      emptyText: "Një regjistër i koncerteve, bashkëpunimeve dhe incizimeve të fundit.",
+      concerts: [
+        {
+          title: "Nata e Hapjes",
+          meta: "Prishtinë · Mars 2026",
+          text: "Koncerti i parë publik i ansamblit, nga Josquin te Pärt.",
+        },
+        {
+          title: "Gjashtë Shekuj",
+          meta: "Prizren · Maj 2026",
+          text: "Një program i vetëm që përshkon muzikën korale nga viti 1500 deri sot.",
+        },
+        {
+          title: "Rezidenca e Verës",
+          meta: "Pejë · Korrik 2026",
+          text: "Tri mbrëmje me programe kamertale dhe prova të hapura.",
+        },
+      ],
     },
     booking: {
       heading: "Rezervime",

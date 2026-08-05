@@ -310,7 +310,24 @@ export const de: Dictionary = {
     },
     past: {
       heading: "Vergangene",
-      emptyText: "Konzerte, Kooperationen, Festivals und Aufnahmen werden hier dokumentiert.",
+      emptyText: "Ein Verzeichnis der jüngsten Konzerte, Kooperationen und Aufnahmen.",
+      concerts: [
+        {
+          title: "Eröffnungsabend",
+          meta: "Prishtina · März 2026",
+          text: "Das erste öffentliche Konzert des Ensembles, von Josquin bis Pärt.",
+        },
+        {
+          title: "Sechs Jahrhunderte",
+          meta: "Prizren · Mai 2026",
+          text: "Ein Programm, das Chormusik von 1500 bis heute nachzeichnet.",
+        },
+        {
+          title: "Sommerresidenz",
+          meta: "Peja · Juli 2026",
+          text: "Drei Abende mit Kammerprogrammen und offenen Proben.",
+        },
+      ],
     },
     booking: {
       heading: "Buchungen",

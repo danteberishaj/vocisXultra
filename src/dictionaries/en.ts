@@ -308,7 +308,24 @@ export const en = {
     },
     past: {
       heading: "Past",
-      emptyText: "Concerts, collaborations, festivals and recordings will be documented here.",
+      emptyText: "A record of recent concerts, collaborations and recordings.",
+      concerts: [
+        {
+          title: "Opening Night",
+          meta: "Prishtina · March 2026",
+          text: "The ensemble's first public concert, from Josquin to Pärt.",
+        },
+        {
+          title: "Six Centuries",
+          meta: "Prizren · May 2026",
+          text: "A single programme tracing choral music from 1500 to today.",
+        },
+        {
+          title: "Summer Residency",
+          meta: "Peja · July 2026",
+          text: "Three evenings of chamber programmes and open rehearsals.",
+        },
+      ],
     },
     booking: {
       heading: "Bookings",

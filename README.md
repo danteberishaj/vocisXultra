@@ -52,6 +52,8 @@ Two blocks of the page are scaffolding, not real data. **Both must be replaced b
 
 **The singer roster** — `ensemble.membership.voices` in each dictionary contains eight invented names and bios (Arta Krasniqi, Elira Berisha, …) so the section could be designed. Replace with the real roster as members join; delete a voice group entirely if it has no singers yet.
 
+**The past concerts** — `events.past.concerts` lists three invented performances (Opening Night, Six Centuries, Summer Residency) with invented venues and dates. The Foundation has no concert history yet, so **this is a claim about work that has not happened** and must be replaced or removed before launch. Deleting the array empties the grid; the surrounding section still reads correctly.
+
 The mapping from a person to their portrait lives in [`src/lib/portraits.ts`](src/lib/portraits.ts) and is **positional** — the Nth entry there matches the Nth person in the dictionary arrays. Add or remove people in both places together.
 
 ## Photography

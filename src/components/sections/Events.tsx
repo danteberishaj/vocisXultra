@@ -66,22 +66,33 @@ export function Events({ dict }: { dict: Dictionary }) {
             </p>
           </div>
         </Reveal>
-        {/* Where the performance archive accumulates */}
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {dict.a11y.pastImageAlts.map((alt, i) => (
-            <Reveal key={alt} variant="fade" delay={i * 90}>
-              <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-panel">
-                <Image
-                  src={`/images/past-${i + 1}.webp`}
-                  alt={alt}
-                  fill
-                  sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw"
-                  className="object-cover"
-                />
-              </div>
-            </Reveal>
+        {/* The performance archive */}
+        <ul className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {ev.past.concerts.map((concert, i) => (
+            <li key={concert.title}>
+              <Reveal variant="fade" delay={i * 90}>
+                <article>
+                  <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-panel">
+                    <Image
+                      src={`/images/past-${i + 1}.webp`}
+                      alt={dict.a11y.pastImageAlts[i]}
+                      fill
+                      sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <h4 className="mt-5 font-display text-xl tracking-[-0.02em] text-ink">
+                    {concert.title}
+                  </h4>
+                  <p className="mt-1.5 font-sans text-xs tracking-[0.18em] uppercase text-accent">
+                    {concert.meta}
+                  </p>
+                  <p className="mt-3 text-[0.95rem] leading-relaxed text-faint">{concert.text}</p>
+                </article>
+              </Reveal>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
 
       {/* Bookings — the practical close */}
