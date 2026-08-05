@@ -26,8 +26,11 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
       <main id="main">
         <Hero dict={dict} />
         <Welcome dict={dict} />
-        <Foundation dict={dict} />
+        {/* The ensemble leads: it is what a visitor comes to hear. The
+            Foundation is the institution behind it, and reads better once
+            you know what it exists to support. */}
         <Ensemble dict={dict} />
+        <Foundation dict={dict} />
         <Repertoire dict={dict} />
         <Events dict={dict} locale={locale} />
       </main>

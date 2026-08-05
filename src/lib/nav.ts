@@ -21,17 +21,7 @@ export function buildNav(dict: Dictionary): NavEntry[] {
   // and leaving the opening content unreachable.
   return [
     { id: "welcome", label: nav.welcome, children: [] },
-    {
-      id: "foundation",
-      label: nav.foundation,
-      children: [
-        { id: "foundation", label: nav.overview },
-        { id: "mission", label: foundation.mission.heading },
-        { id: "vision", label: foundation.vision.heading },
-        { id: "values", label: foundation.valuesHeading },
-        { id: "management", label: foundation.managementHeading },
-      ],
-    },
+    // Menu order tracks scroll order — the ensemble comes first on the page.
     {
       id: "ensemble",
       label: nav.ensemble,
@@ -42,6 +32,17 @@ export function buildNav(dict: Dictionary): NavEntry[] {
         { id: "direction", label: ensemble.directionHeading },
         { id: "membership", label: ensemble.membership.heading },
         { id: "singers", label: ensemble.membership.rosterHeading },
+      ],
+    },
+    {
+      id: "foundation",
+      label: nav.foundation,
+      children: [
+        { id: "foundation", label: nav.overview },
+        { id: "mission", label: foundation.mission.heading },
+        { id: "vision", label: foundation.vision.heading },
+        { id: "values", label: foundation.valuesHeading },
+        { id: "management", label: foundation.managementHeading },
       ],
     },
     {

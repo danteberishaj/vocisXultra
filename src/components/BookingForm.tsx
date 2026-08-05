@@ -45,13 +45,17 @@ export function BookingForm({ locale, labels, form }: BookingFormProps) {
         {bookingFields.map((field, i) => {
           const label = labels[i];
           const failed = state.invalid?.includes(field.name);
+          // Namespaced: a bare `contact` id collided with the footer's
+          // #contact anchor, and the browser resolved the nav link to this
+          // field instead of the section. Form names stay unprefixed.
+          const domId = `booking-${field.name}`;
           const shared =
             "peer w-full border-0 border-b bg-transparent pb-2 text-[0.95rem] text-ink outline-none transition-colors placeholder:text-transparent focus:border-accent " +
             (failed ? "border-danger" : "border-hairline");
 
           return (
             <div key={field.name} className={field.type === "textarea" ? "sm:col-span-1" : ""}>
-              <label htmlFor={field.name} className="block font-sans text-sm text-faint">
+              <label htmlFor={domId} className="block font-sans text-sm text-faint">
                 {label}
                 {field.required && (
                   <span aria-hidden className="ml-1 text-accent">
@@ -61,7 +65,7 @@ export function BookingForm({ locale, labels, form }: BookingFormProps) {
               </label>
               {field.type === "textarea" ? (
                 <textarea
-                  id={field.name}
+                  id={domId}
                   name={field.name}
                   rows={2}
                   required={field.required}
@@ -71,7 +75,7 @@ export function BookingForm({ locale, labels, form }: BookingFormProps) {
                 />
               ) : (
                 <input
-                  id={field.name}
+                  id={domId}
                   name={field.name}
                   type={field.type === "email" ? "email" : "text"}
                   autoComplete={field.type === "email" ? "email" : undefined}
