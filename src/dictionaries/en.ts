@@ -40,26 +40,26 @@ export const en = {
   welcome: {
     heading: "Welcome",
     body: [
-      "Founded in 2026 in Prishtina, the vocisXultra Foundation is an independent non-profit cultural institution dedicated to the promotion of artistic excellence in vocal music. At its heart stands the vocisXultra Vocal Ensemble — a chamber choir committed to performances of the highest artistic quality, while cultivating education, cultural dialogue and international collaboration.",
-      "The Foundation was established with a clear purpose: to create a professional platform where singers, conductors, composers and audiences come together through the universal language of music. Guided by deep respect for the traditions of choral literature and an openness to contemporary expression, vocisXultra seeks to enrich the cultural life of Kosovo and to build lasting connections with the international musical community.",
-      "We believe exceptional performances are not created by technical precision alone, but by curiosity, dedication, and a shared passion for artistic excellence.",
+      "We exist to bring singers, conductors, composers and audiences together through the universal language of music.",
+      "Founded in 2026 in Prishtina, we are guided by deep respect for the traditions of choral literature and an openness to contemporary expression.",
+      "Exceptional performances are not created by technical precision alone, but by curiosity, dedication, and a shared passion.",
     ],
     newsHeading: "News",
     news: [
       {
         date: "Prishtina · 2026",
         title: "The vocisXultra Foundation is established",
-        text: "A new independent cultural institution for vocal music is founded in Prishtina, with long-term artistic ambitions for Kosovo and Europe.",
+        text: "A new independent cultural institution for vocal music, with long-term ambitions for Kosovo and Europe.",
       },
       {
         date: "Ensemble · 2026",
         title: "The Vocal Ensemble takes shape",
-        text: "Singers who share a commitment to refined ensemble singing are joining the choir's founding roster. Interested voices are warmly invited to write to us.",
+        text: "Singers are joining the choir's founding roster. Interested voices are warmly invited to write to us.",
       },
       {
         date: "Season · in preparation",
         title: "A first concert season is being prepared",
-        text: "Programming for the inaugural season is underway — carefully curated journeys through six centuries of vocal music. Announcements follow here.",
+        text: "Carefully curated journeys through six centuries of vocal music. Announcements follow here.",
       },
     ],
   },
@@ -67,176 +67,129 @@ export const en = {
     heading: "The Foundation",
     lede: "An institution built slowly, deliberately, and for the long term.",
     about: [
-      "The vocisXultra Foundation is an independent, non-profit cultural organisation established in 2026 in Prishtina, Kosovo, to promote artistic excellence in vocal music through performance, education, research and cultural collaboration. Born from the conviction that music enriches society, inspires dialogue and preserves cultural heritage, it provides the institutional framework for the vocisXultra Vocal Ensemble while supporting projects that reach beyond the concert stage.",
-      "Though recently established, the Foundation was conceived with a long-term vision: to become a respected cultural institution recognised for artistic integrity, educational commitment and international engagement — and to strengthen Kosovo's presence within the international cultural landscape.",
+      "An independent, non-profit cultural organisation promoting artistic excellence in vocal music through performance, education, research and collaboration. It provides the institutional home for the vocisXultra Vocal Ensemble, and supports work that reaches beyond the concert stage.",
     ],
     mission: {
       heading: "Our Mission",
       body: [
-        "To promote artistic excellence in vocal music while fostering education, cultural dialogue and international collaboration. Choral music is one of humanity's richest artistic traditions: it connects people across languages, cultures and generations.",
-        "Our mission is therefore not only to perform outstanding music, but to cultivate environments where musicians learn, collaborate and grow — through concerts, workshops, masterclasses and artistic partnerships that inspire excellence and strengthen the role of music within society.",
+        "To promote artistic excellence in vocal music while fostering education, cultural dialogue and international collaboration — building environments where musicians learn, collaborate and grow.",
       ],
     },
     vision: {
       heading: "Our Vision",
       body: [
-        "To become one of the leading centres for vocal music in Kosovo and an internationally respected partner within the European cultural community — an institution where artistic quality, intellectual curiosity and cultural responsibility coexist, where tradition is preserved and new creative voices are encouraged to flourish.",
+        "To become one of the leading centres for vocal music in Kosovo, and a respected partner within the European cultural community.",
       ],
     },
     valuesHeading: "Our Values",
     values: [
       {
         name: "Artistic Excellence",
-        text: "The highest standards of preparation and performance, achieved through discipline, curiosity and continuous development.",
+        text: "The highest standards of preparation and performance, through discipline and continuous development.",
       },
       {
         name: "Integrity",
-        text: "Every project approached with honesty, transparency and respect for artistic authenticity.",
+        text: "Honesty, transparency, and respect for artistic authenticity.",
       },
       {
         name: "Collaboration",
-        text: "Meaningful achievements are built through cooperation — between musicians, institutions, educators and audiences.",
+        text: "Meaningful work is built between musicians, institutions, educators and audiences.",
       },
       {
         name: "Education",
-        text: "Learning is an ongoing process. The Foundation supports artistic development at every stage of a musician's journey.",
+        text: "Support for artistic development at every stage of a musician's journey.",
       },
       {
         name: "Cultural Dialogue",
-        text: "Music transcends national and linguistic boundaries. International collaboration encourages mutual understanding.",
+        text: "Music crosses borders. Collaboration builds understanding.",
       },
       {
         name: "Innovation",
-        text: "Respecting historical traditions while remaining open to new ideas, contemporary repertoire and interdisciplinary work.",
+        text: "Respect for tradition, openness to new ideas and contemporary repertoire.",
       },
     ],
     managementHeading: "Management",
-    managementIntro:
-      "The Foundation is led by a multidisciplinary team whose combined expertise supports both its artistic vision and its organisational development.",
+    managementIntro: "A multidisciplinary team behind the artistic and organisational work.",
     people: [
       {
         name: "Emanuel Mates",
         role: "Founder & Artistic Director",
-        bio: "Defines the artistic direction of the Foundation and the Vocal Ensemble — repertoire planning, programming, collaborations, educational initiatives, and the institution's long-term artistic development.",
+        bio: "Sets the artistic direction of the Foundation and the Ensemble — repertoire, programming and collaborations.",
       },
       {
         name: "Kristijan Ramaj",
         role: "Legal Affairs",
-        bio: "Oversees the Foundation's legal structure and governance, ensuring all institutional activity meets applicable legislation and the highest standards of transparency.",
+        bio: "Oversees the Foundation's legal structure and governance.",
       },
       {
         name: "Dante Berishaj",
-        role: "Digital Communications & Online Presence",
-        bio: "Responsible for digital communication strategy, the website, social media and visual identity — connecting vocisXultra with audiences at home and abroad.",
+        role: "Digital Communications",
+        bio: "Leads digital strategy, the website, social media and visual identity.",
       },
       {
         name: "Liberta Shtimjani",
         role: "Project Coordinator",
-        bio: "Coordinates the planning and implementation of artistic and organisational activities, supporting the execution of concerts, educational programmes and collaborative initiatives.",
+        bio: "Coordinates concerts, educational programmes and collaborative projects.",
       },
     ],
-    future: {
-      heading: "Looking Towards the Future",
-      body: [
-        "Meaningful cultural institutions are built over time — through vision, dedication and collaboration. Every concert, every partnership and every new project is another step towards becoming a trusted cultural partner and a recognised ambassador for vocal music.",
-      ],
-    },
   },
   ensemble: {
     heading: "The Vocal Ensemble",
     lede: "The artistic heart of the Foundation.",
     about: [
-      "The vocisXultra Vocal Ensemble is the resident performing ensemble of the Foundation — a chamber choir founded in 2026 in Prishtina and dedicated to the highest standards of vocal performance across the richness of the choral repertoire.",
-      "Rather than focusing solely on concerts, the ensemble cultivates an environment in which singers continuously develop their musicianship through disciplined rehearsal, stylistic awareness and collaborative music-making. Every rehearsal is an opportunity for artistic discovery; every performance, a dialogue between composer, performer and audience.",
+      "A chamber choir founded in 2026 in Prishtina, dedicated to the highest standards of vocal performance across the choral repertoire. Every rehearsal is an opportunity for discovery; every performance, a dialogue between composer, performer and audience.",
     ],
     identityHeading: "Artistic Identity",
     identity: [
       {
         name: "Excellence",
-        text: "Not perfection alone, but the continuous pursuit of refinement — every member contributing to a unified artistic vision through preparation, commitment and attentive listening.",
+        text: "Not perfection alone, but the continuous pursuit of refinement.",
       },
       {
         name: "Authenticity",
-        text: "Every work approached with respect for its historical, stylistic and cultural context — interpretations faithful to the composer's intentions, communicating naturally with modern audiences.",
+        text: "Interpretations faithful to the composer, speaking naturally to audiences today.",
       },
       {
         name: "Collaboration",
-        text: "Great choral singing is founded on trust — mutual respect, shared responsibility, open dialogue. The strength of the choir lies in the collective.",
+        text: "Great choral singing is founded on trust. The strength of the choir lies in the collective.",
       },
     ],
     philosophy: {
       quote: "Music should never become a museum piece. It should remain alive.",
-      body: "The human voice is the oldest and most personal of instruments. For centuries it has carried joy, grief, hope and remembrance beyond the limits of language, and held communities together in song. The ensemble approaches every composition as a living work of art — illuminating the composer's intentions while inviting audiences to encounter music in the present.",
+      body: "The human voice is the oldest and most personal of instruments. The ensemble treats every composition as a living work of art, inviting audiences to encounter music in the present.",
     },
     directionHeading: "Artistic Direction",
     direction: {
       name: "Emanuel Mates",
       role: "Founder & Artistic Director",
       body: [
-        "The ensemble is directed by Emanuel Mates, Founder and Artistic Director of the vocisXultra Foundation. Under his leadership it combines rigorous musical preparation with expressive performance, encouraging singers to develop both technical confidence and artistic sensitivity.",
-        "His vision: to establish vocisXultra as an internationally respected vocal ensemble, recognised for musical excellence, innovative programming and meaningful artistic collaboration.",
+        "Under his leadership the ensemble combines rigorous preparation with expressive performance, encouraging singers to develop both technical confidence and artistic sensitivity.",
       ],
     },
     membership: {
       heading: "Membership",
       body: [
-        "The ensemble brings together singers who share a commitment to artistic excellence and collaborative music-making. Membership is based on musical ability, vocal quality, reliability, and the willingness to contribute to a disciplined rehearsal process.",
+        "Membership is based on musical ability, vocal quality, reliability, and the willingness to contribute to a disciplined rehearsal process.",
       ],
-      note: "The ensemble continues to welcome new voices. Biographies are updated as members join.",
+      note: "The ensemble continues to welcome new voices.",
       cta: "Sing with us",
       rosterHeading: "The Singers",
       voices: [
         {
           part: "Soprano",
-          singers: [
-            {
-              name: "Arta Krasniqi",
-              bio: "Studied voice at the University of Prishtina, with a particular affinity for renaissance polyphony and early-music performance practice.",
-            },
-            {
-              name: "Elira Berisha",
-              bio: "A founding voice of the ensemble, active in chamber music and contemporary vocal projects across the region.",
-            },
-          ],
+          singers: [{ name: "Arta Krasniqi" }, { name: "Elira Berisha" }],
         },
         {
           part: "Alto",
-          singers: [
-            {
-              name: "Donika Maloku",
-              bio: "Trained as a music educator, combining choral singing with teaching young musicians in Prishtina.",
-            },
-            {
-              name: "Rina Gashi",
-              bio: "Drawn to the romantic repertoire, with a particular love for Brahms and Fauré.",
-            },
-          ],
+          singers: [{ name: "Donika Maloku" }, { name: "Rina Gashi" }],
         },
         {
           part: "Tenor",
-          singers: [
-            {
-              name: "Blerim Hoxha",
-              bio: "Sings regularly with chamber ensembles across the region, with a lasting interest in historically informed performance.",
-            },
-            {
-              name: "Endrit Çela",
-              bio: "Came to choral singing through instrumental study, and brings a strong interest in twentieth-century repertoire.",
-            },
-          ],
+          singers: [{ name: "Blerim Hoxha" }, { name: "Endrit Çela" }],
         },
         {
           part: "Bass",
-          singers: [
-            {
-              name: "Fatos Zeka",
-              bio: "A long-standing chorister with experience in oratorio and large-scale choral-orchestral works.",
-            },
-            {
-              name: "Granit Morina",
-              bio: "Studies conducting alongside singing in the ensemble, with a focus on baroque performance practice.",
-            },
-          ],
+          singers: [{ name: "Fatos Zeka" }, { name: "Granit Morina" }],
         },
       ],
     },
@@ -248,13 +201,13 @@ export const en = {
       {
         period: "1400–1600",
         name: "Renaissance",
-        text: "The foundation of Western choral music: the extraordinary polyphonic tradition, sung with stylistic clarity, textual expression and historically informed interpretation.",
+        text: "The foundation of Western choral music, sung with stylistic clarity and historically informed interpretation.",
         composers: ["Palestrina", "Victoria", "Byrd", "di Lasso", "Josquin", "Tallis"],
       },
       {
         period: "1600–1750",
         name: "Baroque",
-        text: "Remarkable expressive depth and architectural beauty — often performed in collaboration with period or modern instrumental ensembles.",
+        text: "Expressive depth and architectural beauty, often with period or modern instrumental ensembles.",
         composers: ["Bach", "Schütz", "Monteverdi", "Buxtehude", "Handel", "Charpentier"],
       },
       {
@@ -278,13 +231,13 @@ export const en = {
       {
         period: "Today",
         name: "Contemporary",
-        text: "Supporting living composers — performing newly written music and collaborating directly with its creators.",
+        text: "Performing newly written music and collaborating directly with its composers.",
         composers: [],
       },
     ],
     traditions: {
       heading: "Sacred & Secular",
-      body: "The repertoire embraces both traditions: sacred music — among the richest veins in Western musical history — and secular works exploring poetry, folklore, literature and contemporary themes. Together they offer audiences the full expressive range of the human voice.",
+      body: "The repertoire embraces both traditions — sacred music, among the richest in Western musical history, and secular works exploring poetry, folklore and contemporary themes.",
     },
     activitiesHeading: "Performance Activities",
     activities: [
@@ -292,7 +245,6 @@ export const en = {
       "Festival appearances",
       "Performances with orchestra",
       "Chamber music collaborations",
-      "Liturgical services of artistic significance",
       "Educational concerts",
       "International exchange projects",
       "Recording projects",
@@ -301,23 +253,20 @@ export const en = {
   },
   events: {
     heading: "Events",
-    lede: "Every performance is a new opportunity to connect music with people, places and ideas. Each programme is conceived as a curated artistic experience — a shared musical narrative that respects the historical and cultural context of every work performed.",
+    lede: "Each programme is conceived as a curated artistic experience — a shared musical narrative that respects the context of every work performed.",
     upcoming: {
       heading: "Upcoming",
       emptyTitle: "The first season is being written.",
-      emptyText:
-        "Concert dates and programmes will appear here as the inaugural season takes shape. Follow us to hear the first note.",
+      emptyText: "Dates and programmes appear here as the inaugural season takes shape.",
       follow: "Follow the journey",
     },
     past: {
       heading: "Past",
-      emptyText:
-        "The performance history of vocisXultra will be documented here — concerts, collaborations, festivals, recordings and educational initiatives.",
+      emptyText: "Concerts, collaborations, festivals and recordings will be documented here.",
     },
     booking: {
       heading: "Bookings",
-      intro:
-        "To discuss a concert or artistic collaboration, please write to the Foundation including:",
+      intro: "To discuss a concert or collaboration, write to us including:",
       checklist: [
         "Event name",
         "Date",
@@ -328,13 +277,13 @@ export const en = {
         "Budget, if applicable",
         "Contact details",
       ],
-      note: "Our team responds promptly to discuss artistic possibilities and programme development.",
+      note: "We respond promptly to discuss artistic possibilities.",
       cta: "Enquire about a booking",
     },
   },
   contact: {
     heading: "Contact",
-    lede: "For concerts, collaborations, membership or press — we would be glad to hear from you.",
+    lede: "For concerts, collaborations, membership or press.",
     emailLabel: "Write to us",
     email: "info@vocisxultra.org",
     socialHeading: "Follow",

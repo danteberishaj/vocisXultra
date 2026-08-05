@@ -111,16 +111,6 @@ export function Foundation({ dict }: { dict: Dictionary }) {
         </ul>
       </div>
 
-      <Reveal>
-        <div className="mt-[clamp(5rem,13vh,9rem)] max-w-4xl">
-          <Marker>{f.future.heading}</Marker>
-          {f.future.body.map((p, i) => (
-            <Statement key={i} className="mt-5">
-              {p}
-            </Statement>
-          ))}
-        </div>
-      </Reveal>
     </Section>
   );
 }

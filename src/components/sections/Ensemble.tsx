@@ -8,6 +8,16 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
   const e = dict.ensemble;
   const [opening, ...restAbout] = e.about;
 
+  // One flat roster: the voice grouping becomes a label per singer rather than
+  // four sub-headings, which keeps the section scannable at a glance.
+  const roster = e.membership.voices.flatMap((voice, vi) =>
+    voice.singers.map((singer, si) => ({
+      name: singer.name,
+      part: voice.part,
+      portrait: memberPortraits[vi]?.[si] ?? "",
+    })),
+  );
+
   return (
     <section id="ensemble" className="scroll-mt-20">
       {/* Full-bleed band — the section announces itself edge to edge */}
@@ -150,48 +160,34 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
           </Reveal>
         </div>
 
-        {/* Roster — four across, voice parts marking each movement */}
+        {/* Roster — faces and voice parts, nothing else. The names carry it. */}
         <div className="mt-[clamp(5rem,13vh,9rem)]">
           <Reveal>
             <Marker>{e.membership.rosterHeading}</Marker>
           </Reveal>
-          <div className="mt-10 space-y-14">
-            {e.membership.voices.map((voice, vi) => (
-              <div key={voice.part}>
-                <Reveal>
-                  <h4 className="border-t border-hairline pt-4 font-display text-xl tracking-[-0.01em] text-ink">
-                    {voice.part}
-                  </h4>
+          <ul className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {roster.map((singer, i) => (
+              <li key={singer.name}>
+                <Reveal delay={(i % 4) * 80}>
+                  <div className="relative aspect-3/4 w-full overflow-hidden bg-panel">
+                    <Image
+                      src={singer.portrait}
+                      alt={`${singer.name} — ${singer.part}`}
+                      fill
+                      sizes="(min-width: 1024px) 18rem, (min-width: 640px) 40vw, 85vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <p className="mt-4 font-display text-lg tracking-[-0.02em] text-ink">
+                    {singer.name}
+                  </p>
+                  <p className="mt-1.5 font-sans text-xs tracking-[0.18em] uppercase text-accent">
+                    {singer.part}
+                  </p>
                 </Reveal>
-                <ul className="mt-7 grid gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
-                  {voice.singers.map((singer, si) => {
-                    const portraits = memberPortraits[vi] ?? [];
-                    return (
-                      <li key={singer.name}>
-                        <Reveal delay={si * 80}>
-                          <div className="relative aspect-3/4 w-full overflow-hidden bg-panel">
-                            <Image
-                              src={portraits[si]}
-                              alt={`${singer.name} — ${voice.part}`}
-                              fill
-                              sizes="(min-width: 1024px) 18rem, (min-width: 640px) 40vw, 85vw"
-                              className="object-cover"
-                            />
-                          </div>
-                          <p className="mt-4 font-display text-lg tracking-[-0.02em] text-ink">
-                            {singer.name}
-                          </p>
-                          <p className="mt-2 text-[0.95rem] leading-relaxed text-faint">
-                            {singer.bio}
-                          </p>
-                        </Reveal>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </Section>
     </section>
