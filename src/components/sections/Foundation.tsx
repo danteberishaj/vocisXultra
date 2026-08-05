@@ -27,23 +27,25 @@ export function Foundation({ dict }: { dict: Dictionary }) {
 
   return (
     <Section id="foundation">
-      <Reveal variant="line">
-        <SectionTitle className="max-w-[16ch]">{f.heading}</SectionTitle>
-      </Reveal>
-      <Reveal delay={140}>
-        <p className="mt-6 max-w-2xl text-lg text-faint italic sm:text-xl">{f.lede}</p>
-      </Reveal>
-
-      {/* Two-column magazine setting, indented from the title above it */}
-      <Reveal delay={200}>
-        <div className="mt-14 text-[1.05rem] leading-[1.75] text-faint lg:mt-20 lg:columns-2 lg:gap-14">
+      {/* Title and lede hold the left; the description sits beside them so the
+          opening reads as one block rather than three stacked fragments. */}
+      <div className="grid gap-x-16 gap-y-8 lg:grid-cols-12">
+        <div className="lg:col-span-6">
+          <Reveal variant="line">
+            <SectionTitle className="max-w-[14ch]">{f.heading}</SectionTitle>
+          </Reveal>
+          <Reveal delay={140}>
+            <p className="mt-6 max-w-xl text-lg text-faint italic sm:text-xl">{f.lede}</p>
+          </Reveal>
+        </div>
+        <div className="space-y-6 text-[1.05rem] leading-[1.75] text-faint lg:col-span-5 lg:col-start-8 lg:pt-3">
           {f.about.map((paragraph, i) => (
-            <p key={i} className={i > 0 ? "mt-6 break-inside-avoid" : "break-inside-avoid"}>
-              {paragraph}
-            </p>
+            <Reveal key={i} delay={200 + i * 90}>
+              <p>{paragraph}</p>
+            </Reveal>
           ))}
         </div>
-      </Reveal>
+      </div>
 
       {/* Mission sits left, vision answers from the right — the page breathes */}
       <div className="mt-[clamp(5rem,13vh,9rem)] space-y-[clamp(4rem,10vh,7rem)]">

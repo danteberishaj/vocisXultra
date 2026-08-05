@@ -8,21 +8,23 @@ export function Welcome({ dict }: { dict: Dictionary }) {
 
   return (
     <Section id="welcome">
-      {/* The opening paragraph is the design — set large, given the width */}
-      <Reveal>
-        <Statement className="max-w-[26ch] sm:max-w-[34ch] lg:max-w-[46ch]">{opening}</Statement>
-      </Reveal>
-
-      {/* …then the page drops to a magazine measure and two columns */}
-      <Reveal delay={140}>
-        <div className="mt-16 text-[1.05rem] leading-[1.75] text-faint lg:ml-[28%] lg:mt-20 lg:columns-2 lg:gap-14">
+      {/* Lede and its supporting detail read as one unit: the statement anchors
+          the left, the detail stacks in a narrower column beside it, tops
+          aligned. Deliberately not CSS multi-column — that is for continuous
+          flowing text, and on two discrete paragraphs it just yields two ragged
+          columns of unequal depth. */}
+      <div className="grid gap-x-16 gap-y-10 lg:grid-cols-12">
+        <Reveal className="lg:col-span-7">
+          <Statement>{opening}</Statement>
+        </Reveal>
+        <div className="space-y-6 text-[1.05rem] leading-[1.75] text-faint lg:col-span-4 lg:col-start-9 lg:pt-2">
           {rest.map((paragraph, i) => (
-            <p key={i} className={i > 0 ? "mt-6 break-inside-avoid" : "break-inside-avoid"}>
-              {paragraph}
-            </p>
+            <Reveal key={i} delay={140 + i * 90}>
+              <p>{paragraph}</p>
+            </Reveal>
           ))}
         </div>
-      </Reveal>
+      </div>
 
       <Reveal variant="fade">
         <ImageSlot
