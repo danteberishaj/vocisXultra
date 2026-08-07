@@ -15,6 +15,7 @@ export const managementPortraits = [
   "/images/team/management-2.webp",
   "/images/team/management-3.webp",
   "/images/team/management-4.webp",
+  "/images/team/management-5.webp",
 ] as const;
 
 /**

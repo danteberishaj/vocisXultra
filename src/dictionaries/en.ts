@@ -144,6 +144,11 @@ export const en = {
         role: "Project Coordinator",
         bio: "Coordinates concerts, educational programmes and collaborative projects.",
       },
+      {
+        name: "Arta Jashari",
+        role: "Public Relations",
+        bio: "Handles press, partnerships and how the Foundation speaks in public.",
+      },
     ],
   },
   ensemble: {

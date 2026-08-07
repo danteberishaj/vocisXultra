@@ -146,6 +146,11 @@ export const sq: Dictionary = {
         role: "Koordinatore e projekteve",
         bio: "Koordinon koncertet, programet edukative dhe projektet e përbashkëta.",
       },
+      {
+        name: "Arta Jashari",
+        role: "Marrëdhënie me publikun",
+        bio: "Kujdeset për shtypin, partneritetet dhe zërin publik të Fondacionit.",
+      },
     ],
   },
   ensemble: {

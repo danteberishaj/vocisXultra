@@ -146,6 +146,11 @@ export const de: Dictionary = {
         role: "Projektkoordinatorin",
         bio: "Koordiniert Konzerte, Bildungsprogramme und gemeinsame Projekte.",
       },
+      {
+        name: "Arta Jashari",
+        role: "Öffentlichkeitsarbeit",
+        bio: "Betreut Presse, Partnerschaften und die öffentliche Stimme der Stiftung.",
+      },
     ],
   },
   ensemble: {

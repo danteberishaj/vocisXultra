@@ -116,16 +116,16 @@ export function Foundation({ dict }: { dict: Dictionary }) {
             {f.managementIntro}
           </p>
         </Reveal>
-        <ul className="mt-14 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-5 lg:gap-x-7">
           {f.people.map((person, i) => (
             <li key={person.name} className={i % 2 === 1 ? "lg:mt-16" : undefined}>
-              <Reveal delay={(i % 4) * 90}>
+              <Reveal delay={(i % 5) * 90}>
                 <div className="relative aspect-3/4 w-full overflow-hidden rounded-2xl bg-panel">
                   <Image
                     src={managementPortraits[i]}
                     alt={`${person.name} — ${person.role}`}
                     fill
-                    sizes="(min-width: 1024px) 18rem, (min-width: 640px) 40vw, 85vw"
+                    sizes="(min-width: 1024px) 14rem, (min-width: 640px) 40vw, 85vw"
                     className="object-cover"
                   />
                 </div>

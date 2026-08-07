@@ -69,7 +69,7 @@ What holds the page together is **consistency of voice, not consistency of treat
 
 **Compositions in use** (keep them distinct as the page grows):
 - *Welcome* — oversized opening statement, then two-column magazine text indented ~28%.
-- *Foundation* — mission left, vision answering **right-aligned**; values three-up; management as a staggered four-portrait strip.
+- *Foundation* — mission left, vision answering **right-aligned**; values three-up; management as a staggered five-portrait strip.
 - *Ensemble* — full-bleed band; three wide principles; **the page's one centred moment** (philosophy quote); tall portrait against open space; roster four-up.
 - *Repertoire* — era name huge with the period baseline-aligned opposite it, then a two-column split.
 - *Events* — the empty season set at display scale; bookings as an asymmetric 5/6 split.
