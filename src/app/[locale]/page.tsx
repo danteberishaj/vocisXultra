@@ -29,7 +29,7 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
         {/* The ensemble leads: it is what a visitor comes to hear. The
             Foundation is the institution behind it, and reads better once
             you know what it exists to support. */}
-        <Ensemble dict={dict} />
+        <Ensemble dict={dict} locale={locale} />
         <Foundation dict={dict} />
         <Repertoire dict={dict} />
         <Events dict={dict} locale={locale} />

@@ -1,11 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Reveal } from "@/components/Reveal";
 import { Marker, Section, SectionTitle, Shell, Statement } from "@/components/Layout";
 import { SingerCard } from "@/components/SingerCard";
+import { IconArrowUpRight } from "@/components/icons";
 import { memberPortraits } from "@/lib/portraits";
+import type { Locale } from "@/lib/locales";
 import type { Dictionary } from "@/dictionaries/en";
 
-export function Ensemble({ dict }: { dict: Dictionary }) {
+export function Ensemble({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const e = dict.ensemble;
   const [opening, ...restAbout] = e.about;
 
@@ -136,6 +139,20 @@ export function Ensemble({ dict }: { dict: Dictionary }) {
                 </Reveal>
               ))}
             </div>
+            {/* Quieter than the ghost-bordered membership CTA further down —
+                this is a way through to a detail page, not the section's ask. */}
+            <Reveal delay={100 + e.direction.body.length * 100}>
+              <Link
+                href={`/${locale}/emanuel-mates`}
+                className="group mt-8 inline-flex min-h-11 items-center gap-2.5 font-sans text-[0.82rem] font-medium tracking-[0.14em] uppercase text-ink underline decoration-accent-deep decoration-1 underline-offset-[7px] transition-colors duration-300 hover:text-accent hover:decoration-accent"
+              >
+                {dict.director.readMore}
+                <IconArrowUpRight
+                  aria-hidden
+                  className="size-3.5 transition-transform duration-300 ease-out-quart group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </Link>
+            </Reveal>
           </div>
         </div>
 

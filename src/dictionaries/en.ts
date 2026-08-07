@@ -18,6 +18,8 @@ export const en = {
       "An open choral score on a white table in soft daylight, a pencil resting on the page",
     conductorImageAlt:
       "A conductor's raised hands holding a baton against a bright, softly blurred concert hall",
+    directorImageAlt:
+      "Emanuel Mates at the organ console, an open score on the music desk in front of him",
     welcomeImageAlt:
       "The ensemble performing in a bright modern concert hall, tall windows along the wall behind them",
     upcomingImageAlt:
@@ -246,6 +248,32 @@ export const en = {
           ],
         },
       ],
+    },
+  },
+  /**
+   * The Artistic Director's full biography — its own page at
+   * `/[locale]/emanuel-mates`. `name` and `role` are not repeated here; the
+   * page reads them from `ensemble.direction` so a title change lands in one
+   * place.
+   */
+  director: {
+    subtitle: "Organist · Conductor · Composer",
+    readMore: "Read the full biography",
+    back: "Back to the ensemble",
+    lead: "Emanuel Mates (*1992, Skopje, North Macedonia) is an organist, conductor, and composer. He currently serves as Principal Organist of the Cathedral of Saint Mother Teresa in Prishtina (Kosovo) and is the founder and Artistic Director of the vocal ensemble vocisXultra.",
+    body: [
+      "His musical education began at an early age with private piano and organ instruction. Alongside his studies in Catholic Theology in Đakovo (Croatia), he continued his musical training through private tuition, developing an intensive artistic practice from an early stage. His career has been shaped by many years of liturgical service, continuous musical development, and an active international concert career.",
+      "From 2012 to 2016, Emanuel Mates served as Assistant Organist of St. Peter's Cathedral in Đakovo, Conductor of the Choir of the Catholic Faculty of Theology in Đakovo, and a collaborator with the Office of Church Music of the Archdiocese of Đakovo–Osijek. During this period, he founded the vocal ensemble Sursum Corda, serving as its Artistic Director.",
+      "As an organist, he has also served at the parish of Kissing (Germany), the Basilica of Mariastein (Switzerland), and the Albanian Catholic Mission in Lucerne (Switzerland). In 2019, he participated in the musical programme of the Apostolic Visit of Pope Francis to Skopje.",
+      "His concert activities as an organist and conductor have taken him to North Macedonia, Kosovo, Serbia, Croatia, Slovenia, Italy, Germany, Switzerland, and Liechtenstein. Among the formative experiences of his musical career has been his participation in performances of major sacred choral masterpieces, including Johann Sebastian Bach's St John Passion, Wolfgang Amadeus Mozart's Requiem, and Gabriel Fauré's Requiem.",
+      "Alongside his concert activities, Emanuel Mates is active as a composer. His output includes sacred and secular choral music as well as arrangements for choir and organ. His principal works include Atdheut (2023), the Arrangement of the Old Albanian National Anthem for Choir and Organ (2023), Cigarja (2024), Missa Simplex for SATB a cappella (2026), Missa Albanica, and numerous choral settings of Albanian sacred music, including an Albanian version of Stabat Mater (2026) and Eja, o Zot (2025).",
+    ],
+    closing:
+      "Through the founding of vocisXultra, Emanuel Mates aims to establish a professional vocal ensemble dedicated to the performance of Early Music, demanding a cappella repertoire, and major works of the European choral tradition. His artistic vision combines historically informed performance practice with contemporary concert programming, fostering a dialogue between the musical traditions of Europe and the Albanian cultural heritage.",
+    meta: {
+      title: "Emanuel Mates — Founder & Artistic Director | vocisXultra",
+      description:
+        "Organist, conductor and composer. Principal Organist of the Cathedral of Saint Mother Teresa in Prishtina and founder of the vocal ensemble vocisXultra.",
     },
   },
   repertoire: {

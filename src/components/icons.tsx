@@ -35,6 +35,14 @@ export function IconArrowDown(props: IconProps) {
   );
 }
 
+export function IconArrowLeft(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={16} height={16} {...base} {...props}>
+      <path d="M20 12H4m0 0l6-6m-6 6l6 6" />
+    </svg>
+  );
+}
+
 export function IconArrowUpRight(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" width={16} height={16} {...base} {...props}>

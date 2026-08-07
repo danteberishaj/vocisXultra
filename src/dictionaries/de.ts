@@ -20,6 +20,8 @@ export const de: Dictionary = {
       "Eine aufgeschlagene Chorpartitur auf einem weißen Tisch in weichem Tageslicht, ein Bleistift liegt auf der Seite",
     conductorImageAlt:
       "Die erhobenen Hände eines Dirigenten mit Taktstock vor einem hellen, sanft unscharfen Konzertsaal",
+    directorImageAlt:
+      "Emanuel Mates am Orgelspieltisch, vor ihm eine aufgeschlagene Partitur",
     welcomeImageAlt:
       "Das Ensemble bei einer Aufführung in einem hellen modernen Konzertsaal, hohe Fenster entlang der Wand dahinter",
     upcomingImageAlt:
@@ -248,6 +250,26 @@ export const de: Dictionary = {
           ],
         },
       ],
+    },
+  },
+  director: {
+    subtitle: "Organist · Dirigent · Komponist",
+    readMore: "Vollständige Biografie lesen",
+    back: "Zurück zum Ensemble",
+    lead: "Emanuel Mates (*1992 in Skopje, Nordmazedonien) ist Organist, Dirigent und Komponist. Er ist Hauptorganist der Kathedrale der Heiligen Mutter Teresa in Prishtina (Kosovo) sowie Gründer und künstlerischer Leiter des Vokalensembles vocisXultra.",
+    body: [
+      "Seine musikalische Ausbildung begann bereits in jungen Jahren mit privatem Klavier- und Orgelunterricht. Parallel zu seinem Studium der Katholischen Theologie in Đakovo (Kroatien) setzte er seine musikalische Ausbildung durch privaten Unterricht fort und entwickelte früh eine intensive künstlerische Praxis. Seine Laufbahn ist geprägt von langjähriger liturgischer Erfahrung, kontinuierlicher musikalischer Weiterbildung sowie einer vielseitigen internationalen Konzerttätigkeit.",
+      "Von 2012 bis 2016 war Emanuel Mates Hilfsorganist der Kathedrale St. Peter in Đakovo, Dirigent des Fakultätschors der Katholisch-Theologischen Fakultät Đakovo sowie Mitarbeiter des Amtes für Kirchenmusik der Erzdiözese Đakovo-Osijek. In dieser Zeit gründete er das Vokalensemble Sursum Corda, dessen künstlerische Leitung er übernahm.",
+      "Als Organist war er außerdem in der Pfarrei Kissing (Deutschland), an der Basilika Mariastein (Schweiz) sowie an der Albanischen Katholischen Mission Luzern (Schweiz) tätig. Im Jahr 2019 wirkte er an der musikalischen Gestaltung des Apostolischen Besuchs von Papst Franziskus in Skopje mit.",
+      "Seine Konzerttätigkeit führte ihn als Organist und Dirigent nach Nordmazedonien, Kosovo, Serbien, Kroatien, Slowenien, Italien, Deutschland, in die Schweiz und nach Liechtenstein. Zu den prägenden Stationen seiner musikalischen Entwicklung zählt zudem die Mitwirkung an Aufführungen bedeutender Werke der geistlichen Chorliteratur, darunter Johann Sebastian Bachs Johannes-Passion, Wolfgang Amadeus Mozarts Requiem und Gabriel Faurés Requiem.",
+      "Neben seiner Konzerttätigkeit widmet sich Emanuel Mates der Komposition geistlicher und weltlicher Chormusik. Sein bisheriges Schaffen umfasst die Chorwerke Atdheut (2023) und Cigarja (2024), das Arrangement der alten albanischen Nationalhymne für Chor und Orgel (2023), die Missa Simplex für SATB a cappella (2026), die Missa Albanica sowie zahlreiche Choralfassungen albanischer geistlicher Gesänge, darunter eine albanische Fassung des Stabat Mater (2026) und Eja, o Zot (2025).",
+    ],
+    closing:
+      "Mit der Gründung von vocisXultra verfolgt Emanuel Mates das Ziel, ein professionelles Vokalensemble aufzubauen, das sich der Aufführung Alter Musik, anspruchsvoller A-cappella-Literatur und bedeutender Werke der europäischen Chormusik widmet. Seine künstlerische Arbeit verbindet historische Aufführungspraxis mit zeitgenössischer Konzertgestaltung und schlägt Brücken zwischen den musikalischen Traditionen Europas und dem albanischen Kulturraum.",
+    meta: {
+      title: "Emanuel Mates — Gründer & Künstlerischer Leiter | vocisXultra",
+      description:
+        "Organist, Dirigent und Komponist. Hauptorganist der Kathedrale der Heiligen Mutter Teresa in Prishtina und Gründer des Vokalensembles vocisXultra.",
     },
   },
   repertoire: {

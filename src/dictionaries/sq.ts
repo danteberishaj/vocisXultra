@@ -20,6 +20,8 @@ export const sq: Dictionary = {
       "Një partiturë korale e hapur mbi një tavolinë të bardhë në dritë të butë dite, me një laps mbi faqe",
     conductorImageAlt:
       "Duart e ngritura të një dirigjenti me bagetë përballë një salle koncertale të ndritshme, të turbulluar butësisht",
+    directorImageAlt:
+      "Emanuel Mates në konsolën e organos, me një partiturë të hapur para tij",
     welcomeImageAlt:
       "Ansambli duke interpretuar në një sallë moderne koncertale të ndritshme, me dritare të larta përgjatë murit pas tyre",
     upcomingImageAlt:
@@ -248,6 +250,26 @@ export const sq: Dictionary = {
           ],
         },
       ],
+    },
+  },
+  director: {
+    subtitle: "Organist · Dirigjent · Kompozitor",
+    readMore: "Lexo biografinë e plotë",
+    back: "Kthehu te ansambli",
+    lead: "Emanuel Mates (*1992, Shkup, Maqedonia e Veriut) është organist, dirigjent dhe kompozitor. Aktualisht shërben si organisti kryesor i Katedrales së Shën Nënë Terezës në Prishtinë (Kosovë) dhe është themelues e drejtor artistik i ansamblit vokal vocisXultra.",
+    body: [
+      "Formimi i tij muzikor filloi që në moshë të re me mësime private në piano dhe organo. Paralelisht me studimet e tij në Teologji Katolike në Đakovo (Kroaci), ai vazhdoi edukimin muzikor përmes mësimeve private, duke zhvilluar që herët një veprimtari intensive artistike. Rruga e tij profesionale karakterizohet nga një përvojë shumëvjeçare në muzikën liturgjike, formimi i vazhdueshëm muzikor dhe një veprimtari e gjerë koncertale në arenën ndërkombëtare.",
+      "Gjatë viteve 2012–2016, Emanuel Mates ishte organist ndihmës në Katedralen e Shën Pjetrit në Đakovo, dirigjent i korit të Fakultetit të Teologjisë Katolike në Đakovo, si dhe bashkëpunëtor në Zyrën për Muzikën Kishtare të Kryedioqezës së Đakovo-Osijekut. Në këtë periudhë ai themeloi ansamblin vokal Sursum Corda, drejtimin artistik të të cilit e mori përsipër vetë.",
+      "Si organist ka shërbyer gjithashtu në famullinë e Kissingut (Gjermani), në Bazilikën e Mariasteinit (Zvicër), si dhe në Misionin Katolik Shqiptar në Luzern (Zvicër). Në vitin 2019 mori pjesë në programin muzikor të Vizitës Apostolike të Papa Françeskut në Shkup.",
+      "Veprimtaria e tij koncertale e ka çuar si organist dhe dirigjent në Maqedoninë e Veriut, Kosovë, Serbi, Kroaci, Slloveni, Itali, Gjermani, Zvicër dhe Lihtenshtajn. Në zhvillimin e tij artistik kanë lënë gjurmë edhe pjesëmarrjet në interpretimin e veprave madhore të muzikës korale kishtare, ndër to “Johannes-Passion” e Johann Sebastian Bach, “Requiem” i Wolfgang Amadeus Mozart dhe “Requiem” i Gabriel Fauré.",
+      "Krahas veprimtarisë së tij koncertale, Emanuel Mates merret edhe me kompozim. Krijimtaria e tij përfshin muzikë korale kishtare dhe laike, si dhe aranzhime për kor dhe organo. Ndër veprat e tij më të rëndësishme janë Atdheut (2023), Aranzhimi i Himnit të Vjetër Shqiptar për kor dhe organo (2023), Cigarja (2024), Missa Simplex për kor SATB a cappella (2026), Missa Albanica, si dhe një numër përpunimesh korale të këngëve shpirtërore shqiptare, ndër të cilat versioni shqiptar i “Stabat Mater” (2026) dhe “Eja, o Zot” (2025).",
+    ],
+    closing:
+      "Me themelimin e vocisXultra, Emanuel Mates synon të ndërtojë një ansambël vokal profesionist, të përkushtuar ndaj interpretimit të muzikës së hershme, repertorit të kërkuar a cappella dhe veprave më të rëndësishme të muzikës korale evropiane. Puna e tij artistike ndërthur praktikën historike të interpretimit me një qasje bashkëkohore koncertale, duke krijuar ura ndërmjet traditave muzikore evropiane dhe trashëgimisë kulturore shqiptare.",
+    meta: {
+      title: "Emanuel Mates — Themelues & Drejtor Artistik | vocisXultra",
+      description:
+        "Organist, dirigjent dhe kompozitor. Organisti kryesor i Katedrales së Shën Nënë Terezës në Prishtinë dhe themelues i ansamblit vokal vocisXultra.",
     },
   },
   repertoire: {

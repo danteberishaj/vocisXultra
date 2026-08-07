@@ -12,9 +12,20 @@ import type { Dictionary } from "@/dictionaries/en";
 type SiteNavProps = {
   locale: Locale;
   dict: Dictionary;
+  /**
+   * Prefix for the in-page anchors. Empty on the home page, where `#direction`
+   * is a same-document jump. Subpages pass `/{locale}` so the same menu points
+   * back at the one long page instead of hunting for anchors that aren't there.
+   */
+  anchorBase?: string;
+  /**
+   * Path segment the locale switcher keeps when changing language, so a
+   * subpage switches to its own translation rather than dropping you home.
+   */
+  localeSuffix?: string;
 };
 
-export function SiteNav({ locale, dict }: SiteNavProps) {
+export function SiteNav({ locale, dict, anchorBase = "", localeSuffix = "" }: SiteNavProps) {
   const nav = buildNav(dict);
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -76,10 +87,10 @@ export function SiteNav({ locale, dict }: SiteNavProps) {
         {/* Desktop */}
         <nav className="hidden items-center gap-7 lg:flex" aria-label={dict.nav.welcome}>
           {nav.map((entry) => (
-            <DesktopItem key={entry.id} entry={entry} />
+            <DesktopItem key={entry.id} entry={entry} anchorBase={anchorBase} />
           ))}
           <span aria-hidden className="h-4 w-px bg-hairline" />
-          <LocaleSwitcher current={locale} label={dict.a11y.langLabel} />
+          <LocaleSwitcher current={locale} label={dict.a11y.langLabel} suffix={localeSuffix} />
         </nav>
 
         {/* Mobile trigger */}
@@ -128,7 +139,7 @@ export function SiteNav({ locale, dict }: SiteNavProps) {
           {nav.map((entry) => (
             <div key={entry.id} className="border-b border-hairline/60 py-5">
               <a
-                href={`#${entry.id}`}
+                href={`${anchorBase}#${entry.id}`}
                 onClick={close}
                 className="block font-display text-2xl text-ink transition-colors hover:text-accent"
               >
@@ -139,7 +150,7 @@ export function SiteNav({ locale, dict }: SiteNavProps) {
                   {entry.children.map((child) => (
                     <li key={child.id}>
                       <a
-                        href={`#${child.id}`}
+                        href={`${anchorBase}#${child.id}`}
                         onClick={close}
                         className="inline-flex min-h-9 items-center font-sans text-sm text-faint transition-colors hover:text-accent"
                       >
@@ -154,7 +165,7 @@ export function SiteNav({ locale, dict }: SiteNavProps) {
         </nav>
 
         <div className="mx-auto w-full max-w-[84rem] px-6 pb-12 sm:px-10">
-          <LocaleSwitcher current={locale} label={dict.a11y.langLabel} large />
+          <LocaleSwitcher current={locale} label={dict.a11y.langLabel} suffix={localeSuffix} large />
         </div>
       </div>
     </header>
@@ -172,13 +183,13 @@ export function SiteNav({ locale, dict }: SiteNavProps) {
  * The parent stays a plain link to the section: the dropdown supplements it
  * rather than trapping the top-level destination behind a menu.
  */
-function DesktopItem({ entry }: { entry: NavEntry }) {
+function DesktopItem({ entry, anchorBase }: { entry: NavEntry; anchorBase: string }) {
   const linkClass =
     "font-sans text-[0.8rem] font-medium tracking-[0.14em] uppercase text-faint transition-colors hover:text-ink focus-visible:text-ink";
 
   if (entry.children.length === 0) {
     return (
-      <a href={`#${entry.id}`} className={linkClass}>
+      <a href={`${anchorBase}#${entry.id}`} className={linkClass}>
         {entry.label}
       </a>
     );
@@ -186,7 +197,7 @@ function DesktopItem({ entry }: { entry: NavEntry }) {
 
   return (
     <div className="group relative">
-      <a href={`#${entry.id}`} className={`${linkClass} inline-flex h-16 items-center`}>
+      <a href={`${anchorBase}#${entry.id}`} className={`${linkClass} inline-flex h-16 items-center`}>
         {entry.label}
       </a>
 
@@ -199,7 +210,7 @@ function DesktopItem({ entry }: { entry: NavEntry }) {
           {entry.children.map((child) => (
             <li key={child.id}>
               <a
-                href={`#${child.id}`}
+                href={`${anchorBase}#${child.id}`}
                 className="block rounded-xl px-4 py-2.5 font-sans text-sm whitespace-nowrap text-faint transition-colors hover:bg-panel hover:text-ink focus-visible:bg-panel focus-visible:text-ink"
               >
                 {child.label}
@@ -215,10 +226,12 @@ function DesktopItem({ entry }: { entry: NavEntry }) {
 function LocaleSwitcher({
   current,
   label,
+  suffix = "",
   large = false,
 }: {
   current: Locale;
   label: string;
+  suffix?: string;
   large?: boolean;
 }) {
   return (
@@ -226,7 +239,7 @@ function LocaleSwitcher({
       {locales.map((locale) => (
         <Link
           key={locale}
-          href={`/${locale}`}
+          href={`/${locale}${suffix}`}
           aria-current={locale === current ? "true" : undefined}
           aria-label={localeNames[locale]}
           className={`font-sans font-medium tracking-[0.14em] uppercase transition-colors ${
