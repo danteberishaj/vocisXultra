@@ -60,7 +60,7 @@ The mapping from a person to their portrait lives in [`src/lib/portraits.ts`](sr
 
 Almost every image on the page is an **AI-generated placeholder**. They are stylistically consistent — bright daylight, modern secular concert halls, airy and pale — but none of them shows the real ensemble. Swap them for real photographs before launch.
 
-The exceptions are `team/management-1.webp` (Emanuel Mates at the organ), `team/management-2.webp` (Kristijan Ramaj) and `team/management-4.webp` (Liberta Shtimjani), which are real supplied photographs. The first two are darker than the house style described above; they stand out in the management strip until the other portraits are real too.
+The exceptions are `team/management-1.webp` (Emanuel Mates at the organ), `team/management-2.webp` (Kristijan Ramaj), `team/management-3.webp` (Dante Berishaj) and `team/management-4.webp` (Liberta Shtimjani), which are real supplied photographs. Emanuel's and Kristijan's are darker than the house style described above; they stand out in the management strip until the last portrait is real too.
 
 | File | Ratio | Where |
 |---|---|---|
@@ -101,7 +101,7 @@ Includes a honeypot field, a 2000-character cap per field, server-side validatio
 
 - [ ] Replace every photograph with real imagery (see Photography above)
 
-- [ ] Real headshots for management + singers, and the real roster (see above) — Emanuel Mates, Kristijan Ramaj and Liberta Shtimjani are done
+- [ ] Real headshots for management + singers, and the real roster (see above) — all of management is done except Arta Jashari (`management-5.webp`)
 - [x] Contact email — `vocisxultra@gmail.com`, set in all three dictionaries (`contact.email` and the impressum block). Mailto links and the JSON-LD read from that field, so changing it there is enough.
 - [ ] `instagram.com/vocisxultra` / `facebook.com/vocisxultra` — `src/components/sections/SiteFooter.tsx` and JSON-LD in `src/app/[locale]/layout.tsx`
 - [ ] Domain `vocisxultra.org` — `metadataBase` + JSON-LD in `layout.tsx`, `src/app/sitemap.ts`, `src/app/robots.ts`

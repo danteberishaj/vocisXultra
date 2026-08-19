@@ -5,7 +5,7 @@
  * The `Dictionary` type forces every locale to share the same array order, so
  * index mapping is stable — keep these lists in sync when adding a person.
  *
- * ⚠ MOSTLY PLACEHOLDERS — every file except the two marked below is an
+ * ⚠ MOSTLY PLACEHOLDERS — every file except the four marked below is an
  * AI-generated portrait, not a photograph of the person named. Replace the
  * rest with real headshots before the site goes live.
  */
@@ -13,7 +13,7 @@
 export const managementPortraits = [
   "/images/team/management-1.webp", // real — Emanuel Mates at the organ
   "/images/team/management-2.webp", // real — Kristijan Ramaj
-  "/images/team/management-3.webp",
+  "/images/team/management-3.webp", // real — Dante Berishaj
   "/images/team/management-4.webp", // real — Liberta Shtimjani
   "/images/team/management-5.webp",
 ] as const;
