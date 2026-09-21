@@ -21,12 +21,12 @@ export const en = {
     directorImageAlt:
       "Emanuel Mates at the organ console, an open score on the music desk in front of him",
     welcomeImageAlt:
-      "The ensemble performing in a bright modern concert hall, tall windows along the wall behind them",
+      "An empty concert hall with an organ, music stands and a grand piano",
     upcomingImageAlt:
-      "Singers with open scores during a performance, seen past the conductor's shoulder",
+      "An empty recital hall prepared for a choral performance, with an organ and music stands",
     pastImageAlts: [
-      "The ensemble taking a bow at the end of a concert",
-      "Singers mid-performance, open scores in hand",
+      "An empty concert stage prepared for a performance, with a grand piano and music stands",
+      "An organ console with choral scores in warm evening light",
       "The empty hall after a concert, music stands and scores still in place",
     ],
   },
@@ -137,16 +137,6 @@ export const en = {
         bio: "Oversees the Foundation's legal structure and governance.",
       },
       {
-        name: "Dante Berishaj",
-        role: "Digital Communications",
-        bio: "Leads digital strategy, the website, social media and visual identity.",
-      },
-      {
-        name: "Liberta Shtimjani",
-        role: "Project Coordinator",
-        bio: "Coordinates concerts, educational programmes and collaborative projects.",
-      },
-      {
         name: "Arta Jashari",
         role: "Public Relations",
         bio: "Handles press, partnerships and how the Foundation speaks in public.",
@@ -199,12 +189,24 @@ export const en = {
           part: "Soprano",
           singers: [
             {
-              name: "Arta Krasniqi",
-              bio: "Studied voice at the University of Prishtina. Drawn to renaissance polyphony and early-music performance practice.",
+              name: "Elife Podvorica Jashari",
+              title: "Vocal Coach",
+              bio: "",
             },
             {
-              name: "Elira Berisha",
-              bio: "A founding voice of the ensemble, active in chamber music and contemporary vocal projects across the region.",
+              name: "Diellza Dedushi",
+              title: "Soprano",
+              bio: "",
+            },
+            {
+              name: "Martina Lekaj",
+              title: "Soprano",
+              bio: "",
+            },
+            {
+              name: "Teuta Morina",
+              title: "Soprano",
+              bio: "",
             },
           ],
         },
@@ -212,12 +214,9 @@ export const en = {
           part: "Alto",
           singers: [
             {
-              name: "Donika Maloku",
-              bio: "Trained as a music educator, combining choral singing with teaching young musicians in Prishtina.",
-            },
-            {
-              name: "Rina Gashi",
-              bio: "Drawn to the romantic repertoire, with a particular love for Brahms and Fauré.",
+              name: "Blenda Kelmendi",
+              title: "Alto",
+              bio: "",
             },
           ],
         },
@@ -225,12 +224,9 @@ export const en = {
           part: "Tenor",
           singers: [
             {
-              name: "Blerim Hoxha",
-              bio: "Sings regularly with chamber ensembles across the region, with a lasting interest in historically informed performance.",
-            },
-            {
-              name: "Endrit Çela",
-              bio: "Came to choral singing through instrumental study, and brings a strong interest in twentieth-century repertoire.",
+              name: "Erdonis Gashi",
+              title: "Tenor",
+              bio: "",
             },
           ],
         },
@@ -238,12 +234,14 @@ export const en = {
           part: "Bass",
           singers: [
             {
-              name: "Fatos Zeka",
-              bio: "A long-standing chorister with experience in oratorio and large-scale choral-orchestral works.",
+              name: "Leon Ndou",
+              title: "Bass",
+              bio: "",
             },
             {
-              name: "Granit Morina",
-              bio: "Studies conducting alongside singing in the ensemble, with a focus on baroque performance practice.",
+              name: "Taulant Lleshi",
+              title: "Bass",
+              bio: "",
             },
           ],
         },

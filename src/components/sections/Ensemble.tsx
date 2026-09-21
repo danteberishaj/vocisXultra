@@ -18,7 +18,7 @@ export function Ensemble({ dict, locale }: { dict: Dictionary; locale: Locale })
     voice.singers.map((singer, si) => ({
       name: singer.name,
       bio: singer.bio,
-      part: voice.part,
+      title: "title" in singer ? singer.title : voice.part,
       portrait: memberPortraits[vi]?.[si] ?? "",
     })),
   );
@@ -190,7 +190,7 @@ export function Ensemble({ dict, locale }: { dict: Dictionary; locale: Locale })
                 <Reveal delay={(i % 4) * 80}>
                   <SingerCard
                     name={singer.name}
-                    part={singer.part}
+                    title={singer.title}
                     bio={singer.bio}
                     portrait={singer.portrait}
                     toggleLabel={dict.a11y.readBio}

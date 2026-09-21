@@ -23,12 +23,12 @@ export const sq: Dictionary = {
     directorImageAlt:
       "Emanuel Mates në konsolën e organos, me një partiturë të hapur para tij",
     welcomeImageAlt:
-      "Ansambli duke interpretuar në një sallë moderne koncertale të ndritshme, me dritare të larta përgjatë murit pas tyre",
+      "Një sallë koncertesh e zbrazët me organ, stenda notash dhe piano të madhe",
     upcomingImageAlt:
-      "Këngëtarë me partitura të hapura gjatë një interpretimi, parë përtej shpatullës së dirigjentit",
+      "Një sallë recitali e zbrazët e përgatitur për një performancë korale, me organ dhe stenda notash",
     pastImageAlts: [
-      "Ansambli duke përshëndetur publikun në fund të një koncerti",
-      "Këngëtarë në mes të interpretimit, me partitura të hapura në duar",
+      "Një skenë koncertesh e zbrazët e përgatitur për performancë, me piano të madhe dhe stenda notash",
+      "Konzola e një organi me partitura korale në dritë të ngrohtë mbrëmjeje",
       "Salla bosh pas një koncerti, me stenda notash dhe partitura ende në vend",
     ],
   },
@@ -139,16 +139,6 @@ export const sq: Dictionary = {
         bio: "Mbikëqyr strukturën ligjore dhe qeverisjen e Fondacionit.",
       },
       {
-        name: "Dante Berishaj",
-        role: "Komunikimi digjital",
-        bio: "Udhëheq strategjinë digjitale, faqen, rrjetet sociale dhe identitetin vizual.",
-      },
-      {
-        name: "Liberta Shtimjani",
-        role: "Koordinatore e projekteve",
-        bio: "Koordinon koncertet, programet edukative dhe projektet e përbashkëta.",
-      },
-      {
         name: "Arta Jashari",
         role: "Marrëdhënie me publikun",
         bio: "Kujdeset për shtypin, partneritetet dhe zërin publik të Fondacionit.",
@@ -201,12 +191,24 @@ export const sq: Dictionary = {
           part: "Soprano",
           singers: [
             {
-              name: "Arta Krasniqi",
-              bio: "Ka studiuar këndim në Universitetin e Prishtinës. E tërhequr nga polifonia e Rilindjes dhe praktika interpretuese e muzikës së hershme.",
+              name: "Elife Podvorica Jashari",
+              title: "Trajnuese vokale",
+              bio: "",
             },
             {
-              name: "Elira Berisha",
-              bio: "Një zë themelues i ansamblit, aktive në muzikë kamertale dhe në projekte vokale bashkëkohore në rajon.",
+              name: "Diellza Dedushi",
+              title: "Soprano",
+              bio: "",
+            },
+            {
+              name: "Martina Lekaj",
+              title: "Soprano",
+              bio: "",
+            },
+            {
+              name: "Teuta Morina",
+              title: "Soprano",
+              bio: "",
             },
           ],
         },
@@ -214,12 +216,9 @@ export const sq: Dictionary = {
           part: "Alto",
           singers: [
             {
-              name: "Donika Maloku",
-              bio: "E formuar si pedagoge muzike, ndërthur këndimin koral me mësimdhënien për muzikantët e rinj në Prishtinë.",
-            },
-            {
-              name: "Rina Gashi",
-              bio: "E tërhequr nga repertori romantik, me një dashuri të veçantë për Brahmsin dhe Faurénë.",
+              name: "Blenda Kelmendi",
+              title: "Alto",
+              bio: "",
             },
           ],
         },
@@ -227,12 +226,9 @@ export const sq: Dictionary = {
           part: "Tenor",
           singers: [
             {
-              name: "Blerim Hoxha",
-              bio: "Këndon rregullisht me ansamble kamertale në rajon, me një interes të qëndrueshëm për interpretimin historikisht të informuar.",
-            },
-            {
-              name: "Endrit Çela",
-              bio: "Erdhi te këndimi koral përmes studimeve instrumentale dhe sjell një interes të fortë për repertorin e shekullit XX.",
+              name: "Erdonis Gashi",
+              title: "Tenor",
+              bio: "",
             },
           ],
         },
@@ -240,12 +236,14 @@ export const sq: Dictionary = {
           part: "Bas",
           singers: [
             {
-              name: "Fatos Zeka",
-              bio: "Korist me përvojë të gjatë në oratorio dhe në vepra të mëdha koralo-orkestrale.",
+              name: "Leon Ndou",
+              title: "Bas",
+              bio: "",
             },
             {
-              name: "Granit Morina",
-              bio: "Studion dirigjimin krahas këndimit në ansambël, me fokus në praktikën interpretuese barok.",
+              name: "Taulant Lleshi",
+              title: "Bas",
+              bio: "",
             },
           ],
         },

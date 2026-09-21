@@ -13,9 +13,7 @@
 export const managementPortraits = [
   "/images/team/management-1.webp", // real — Emanuel Mates at the organ
   "/images/team/management-2.webp", // real — Kristijan Ramaj
-  "/images/team/management-3.webp", // real — Dante Berishaj
-  "/images/team/management-4.webp", // real — Liberta Shtimjani
-  "/images/team/management-5.webp",
+  "/images/team/arta-jashari.png", // real — Arta Jashari
 ] as const;
 
 /**
@@ -24,8 +22,8 @@ export const managementPortraits = [
  * name, because the part names are translated ("Bass" / "Bas" / "Bass").
  */
 export const memberPortraits = [
-  ["/images/team/member-1.webp", "/images/team/member-2.webp"], // Soprano
-  ["/images/team/member-3.webp", "/images/team/member-4.webp"], // Alto
-  ["/images/team/member-5.webp", "/images/team/member-6.webp"], // Tenor
-  ["/images/team/member-7.webp", "/images/team/member-8.webp"], // Bass
+  ["/images/team/elife-podvorica-jashari.jpg", "/images/team/diellza-dedushi.jpg", "/images/team/martina-lekaj.jpg", "/images/team/teuta-morina.jpg"], // Soprano
+  ["/images/team/blenda-kelmendi.jpg"], // Alto
+  ["/images/team/erdonis-gashi.jpg"], // Tenor
+  ["/images/team/leon-ndou.jpg", "/images/team/taulant-lleshi.jpg"], // Bass
 ] as const;

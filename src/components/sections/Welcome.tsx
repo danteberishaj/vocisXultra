@@ -29,7 +29,7 @@ export function Welcome({ dict }: { dict: Dictionary }) {
       <Reveal variant="fade">
         <div className="relative mt-[clamp(4rem,10vh,7rem)] aspect-video w-full overflow-hidden rounded-2xl bg-panel">
           <Image
-            src="/images/welcome.webp"
+            src="/images/welcome-faceless.png"
             alt={dict.a11y.welcomeImageAlt}
             fill
             sizes="(min-width: 1024px) 76rem, 100vw"

@@ -6,6 +6,12 @@ import { IconArrowUpRight } from "@/components/icons";
 import type { Locale } from "@/lib/locales";
 import type { Dictionary } from "@/dictionaries/en";
 
+const pastImages = [
+  "/images/past-1-faceless.png",
+  "/images/past-2-faceless.png",
+  "/images/past-3.webp",
+] as const;
+
 export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const ev = dict.events;
 
@@ -48,7 +54,7 @@ export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
           <Reveal variant="fade" delay={160} className="lg:col-span-4 lg:col-start-9">
             <div className="relative aspect-3/4 w-full overflow-hidden rounded-2xl bg-panel">
               <Image
-                src="/images/upcoming.webp"
+                src="/images/upcoming-faceless.png"
                 alt={dict.a11y.upcomingImageAlt}
                 fill
                 sizes="(min-width: 1024px) 22rem, 90vw"
@@ -76,7 +82,7 @@ export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
                 <article>
                   <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-panel">
                     <Image
-                      src={`/images/past-${i + 1}.webp`}
+                      src={pastImages[i]}
                       alt={dict.a11y.pastImageAlts[i]}
                       fill
                       sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw"

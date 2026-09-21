@@ -5,7 +5,7 @@ import Image from "next/image";
 
 type SingerCardProps = {
   name: string;
-  part: string;
+  title: string;
   bio: string;
   portrait: string;
   /** Accessible label for the toggle, already localised. */
@@ -24,7 +24,7 @@ type SingerCardProps = {
  * The biography is in the DOM at all times, so assistive tech reads it whether
  * or not the card has been turned — the flip is presentation, not gating.
  */
-export function SingerCard({ name, part, bio, portrait, toggleLabel }: SingerCardProps) {
+export function SingerCard({ name, title, bio, portrait, toggleLabel }: SingerCardProps) {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ export function SingerCard({ name, part, bio, portrait, toggleLabel }: SingerCar
         <button
           type="button"
           aria-expanded={flipped}
-          aria-label={`${name} — ${part}. ${toggleLabel}`}
+          aria-label={`${name} — ${title}. ${toggleLabel}`}
           data-flipped={flipped}
           onClick={() => setFlipped((v) => !v)}
           onMouseLeave={() => setFlipped(false)}
@@ -54,7 +54,7 @@ export function SingerCard({ name, part, bio, portrait, toggleLabel }: SingerCar
         </button>
       </div>
       <p className="mt-4 font-display text-lg tracking-[-0.02em] text-ink">{name}</p>
-      <p className="mt-1.5 font-sans text-xs tracking-[0.18em] uppercase text-accent">{part}</p>
+      <p className="mt-1.5 font-sans text-xs tracking-[0.18em] uppercase text-accent">{title}</p>
     </div>
   );
 }

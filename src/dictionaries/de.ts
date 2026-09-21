@@ -23,12 +23,12 @@ export const de: Dictionary = {
     directorImageAlt:
       "Emanuel Mates am Orgelspieltisch, vor ihm eine aufgeschlagene Partitur",
     welcomeImageAlt:
-      "Das Ensemble bei einer Aufführung in einem hellen modernen Konzertsaal, hohe Fenster entlang der Wand dahinter",
+      "Ein leerer Konzertsaal mit Orgel, Notenpulten und Flügel",
     upcomingImageAlt:
-      "Sängerinnen und Sänger mit aufgeschlagenen Noten während einer Aufführung, über die Schulter des Dirigenten gesehen",
+      "Ein leerer Recitalsaal, vorbereitet für eine Choraufführung, mit Orgel und Notenpulten",
     pastImageAlts: [
-      "Das Ensemble verbeugt sich am Ende eines Konzerts",
-      "Sängerinnen und Sänger mitten in der Aufführung, mit aufgeschlagenen Noten",
+      "Eine leere Konzertbühne vor der Aufführung, mit Flügel und Notenpulten",
+      "Ein Orgelspieltisch mit Chornoten im warmen Abendlicht",
       "Der leere Saal nach einem Konzert, Notenpulte und Partituren noch an ihrem Platz",
     ],
   },
@@ -139,16 +139,6 @@ export const de: Dictionary = {
         bio: "Verantwortet Rechtsstruktur und Governance der Stiftung.",
       },
       {
-        name: "Dante Berishaj",
-        role: "Digitale Kommunikation",
-        bio: "Leitet Digitalstrategie, Website, soziale Medien und visuelle Identität.",
-      },
-      {
-        name: "Liberta Shtimjani",
-        role: "Projektkoordinatorin",
-        bio: "Koordiniert Konzerte, Bildungsprogramme und gemeinsame Projekte.",
-      },
-      {
         name: "Arta Jashari",
         role: "Öffentlichkeitsarbeit",
         bio: "Betreut Presse, Partnerschaften und die öffentliche Stimme der Stiftung.",
@@ -201,12 +191,24 @@ export const de: Dictionary = {
           part: "Sopran",
           singers: [
             {
-              name: "Arta Krasniqi",
-              bio: "Studierte Gesang an der Universität Prishtina. Der Renaissance-Polyphonie und der historischen Aufführungspraxis zugetan.",
+              name: "Elife Podvorica Jashari",
+              title: "Gesangscoach",
+              bio: "",
             },
             {
-              name: "Elira Berisha",
-              bio: "Eine Gründungsstimme des Ensembles, aktiv in der Kammermusik und in zeitgenössischen Vokalprojekten der Region.",
+              name: "Diellza Dedushi",
+              title: "Sopran",
+              bio: "",
+            },
+            {
+              name: "Martina Lekaj",
+              title: "Sopran",
+              bio: "",
+            },
+            {
+              name: "Teuta Morina",
+              title: "Sopran",
+              bio: "",
             },
           ],
         },
@@ -214,12 +216,9 @@ export const de: Dictionary = {
           part: "Alt",
           singers: [
             {
-              name: "Donika Maloku",
-              bio: "Ausgebildete Musikpädagogin, die Chorgesang mit dem Unterrichten junger Musikerinnen und Musiker in Prishtina verbindet.",
-            },
-            {
-              name: "Rina Gashi",
-              bio: "Dem romantischen Repertoire zugetan, mit besonderer Vorliebe für Brahms und Fauré.",
+              name: "Blenda Kelmendi",
+              title: "Alt",
+              bio: "",
             },
           ],
         },
@@ -227,12 +226,9 @@ export const de: Dictionary = {
           part: "Tenor",
           singers: [
             {
-              name: "Blerim Hoxha",
-              bio: "Singt regelmäßig mit Kammerensembles in der Region, mit anhaltendem Interesse an historisch informierter Aufführungspraxis.",
-            },
-            {
-              name: "Endrit Çela",
-              bio: "Kam über das Instrumentalstudium zum Chorgesang und bringt starkes Interesse am Repertoire des 20. Jahrhunderts mit.",
+              name: "Erdonis Gashi",
+              title: "Tenor",
+              bio: "",
             },
           ],
         },
@@ -240,12 +236,14 @@ export const de: Dictionary = {
           part: "Bass",
           singers: [
             {
-              name: "Fatos Zeka",
-              bio: "Langjähriger Chorsänger mit Erfahrung im Oratorium und in großen chorsinfonischen Werken.",
+              name: "Leon Ndou",
+              title: "Bass",
+              bio: "",
             },
             {
-              name: "Granit Morina",
-              bio: "Studiert Dirigieren neben dem Singen im Ensemble, mit Schwerpunkt auf barocker Aufführungspraxis.",
+              name: "Taulant Lleshi",
+              title: "Bass",
+              bio: "",
             },
           ],
         },
