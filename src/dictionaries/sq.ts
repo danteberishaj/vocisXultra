@@ -401,6 +401,11 @@ export const sq: Dictionary = {
     },
   },
   footer: {
+    sponsor: {
+      heading: "Me mbështetjen e",
+      name: "Ambasada e Hungarisë",
+      location: "Prishtinë",
+    },
     meaning: "vocisXultra · zëra nga përtej",
     rights: "Të gjitha të drejtat e rezervuara.",
   },

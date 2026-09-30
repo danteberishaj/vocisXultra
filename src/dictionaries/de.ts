@@ -401,6 +401,11 @@ export const de: Dictionary = {
     },
   },
   footer: {
+    sponsor: {
+      heading: "Mit Unterstützung der",
+      name: "Botschaft von Ungarn",
+      location: "Pristina",
+    },
     meaning: "vocisXultra · Stimmen von jenseits",
     rights: "Alle Rechte vorbehalten.",
   },

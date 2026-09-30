@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
 import { Wordmark } from "@/components/Wordmark";
 import { Marker, Shell } from "@/components/Layout";
@@ -52,7 +53,40 @@ export function SiteFooter({ dict }: { dict: Dictionary }) {
           </div>
         </Reveal>
 
-        <div className="mt-[clamp(4rem,11vh,8rem)] border-t border-hairline pt-10">
+        <section
+          aria-labelledby="sponsor-heading"
+          className="mt-[clamp(4rem,11vh,8rem)] border-t border-hairline py-10 sm:flex sm:items-center sm:justify-between sm:gap-10"
+        >
+          <h2 id="sponsor-heading" className="font-display text-xl text-faint">
+            {dict.footer.sponsor.heading}
+          </h2>
+          <a
+            href="https://pristina.mfa.gov.hu/en"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 flex w-fit items-center gap-6 text-ink transition-colors hover:text-accent sm:mt-0"
+          >
+            <Image
+              src="/images/sponsors/embassy-of-hungary.png"
+              alt=""
+              loading="eager"
+              unoptimized
+              width={135}
+              height={288}
+              className="h-24 w-auto shrink-0"
+            />
+            <span>
+              <span className="block font-display text-lg sm:text-xl">
+                {dict.footer.sponsor.name}
+              </span>
+              <span className="mt-1 block text-base text-faint">
+                {dict.footer.sponsor.location}
+              </span>
+            </span>
+          </a>
+        </section>
+
+        <div className="border-t border-hairline pt-10">
           <div className="flex flex-col justify-between gap-10 lg:flex-row lg:gap-16">
             <div>
               <Marker className="text-faint">{c.impressum.heading}</Marker>

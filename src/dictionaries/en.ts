@@ -405,6 +405,11 @@ export const en = {
     },
   },
   footer: {
+    sponsor: {
+      heading: "Supported by",
+      name: "Embassy of Hungary",
+      location: "Pristina",
+    },
     meaning: "vocisXultra · voices from beyond",
     rights: "All rights reserved.",
   },
