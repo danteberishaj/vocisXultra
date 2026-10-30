@@ -60,7 +60,6 @@ export function buildNav(dict: Dictionary): NavEntry[] {
       children: [
         { id: "upcoming", label: events.upcoming.heading },
         { id: "past", label: events.past.heading },
-        { id: "bookings", label: events.booking.heading },
       ],
     },
     { id: "contact", label: nav.contact, children: [] },

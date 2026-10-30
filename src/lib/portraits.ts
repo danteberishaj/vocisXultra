@@ -22,8 +22,25 @@ export const managementPortraits = [
  * name, because the part names are translated ("Bass" / "Bas" / "Bass").
  */
 export const memberPortraits = [
-  ["/images/team/elife-podvorica-jashari.jpg", "/images/team/diellza-dedushi.jpg", "/images/team/martina-lekaj.jpg", "/images/team/teuta-morina.jpg"], // Soprano
-  ["/images/team/blenda-kelmendi.jpg"], // Alto
-  ["/images/team/erdonis-gashi.jpg"], // Tenor
-  ["/images/team/leon-ndou.jpg", "/images/team/taulant-lleshi.jpg"], // Bass
+  [
+    "/images/team/margjela-portrait.webp",
+    "/images/team/rite-hyseni-portrait.webp",
+    "/images/team/vlera-firza-portrait.webp",
+    "/images/team/erleta-elezkurtaj-portrait.webp",
+    "/images/team/margarita-berisha-portrait.webp",
+    "/images/team/magdalena-sedaj-portrait.webp",
+  ], // Alto
+  [
+    "/images/team/atlantik-syla-portrait.webp",
+    "/images/team/edison-qyqalla-portrait.webp",
+    "/images/team/emanuel-gjergji-portrait.webp",
+    "/images/team/auron-deva-portrait.webp",
+  ], // Tenor
+  [
+    "/images/team/leon-ndou-portrait.webp",
+    "/images/team/ardit-hasani-portrait.webp",
+    "/images/team/artan-quni-portrait.webp",
+    "/images/team/taulant-lleshi-portrait.webp",
+    "/images/team/mikel-berisha-portrait.webp",
+  ], // Bass
 ] as const;

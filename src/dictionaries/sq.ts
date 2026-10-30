@@ -188,63 +188,33 @@ export const sq: Dictionary = {
       rosterHeading: "Këngëtarët",
       voices: [
         {
-          part: "Soprano",
-          singers: [
-            {
-              name: "Elife Podvorica Jashari",
-              title: "Trajnuese vokale",
-              bio: "",
-            },
-            {
-              name: "Diellza Dedushi",
-              title: "Soprano",
-              bio: "",
-            },
-            {
-              name: "Martina Lekaj",
-              title: "Soprano",
-              bio: "",
-            },
-            {
-              name: "Teuta Morina",
-              title: "Soprano",
-              bio: "",
-            },
-          ],
-        },
-        {
           part: "Alto",
           singers: [
-            {
-              name: "Blenda Kelmendi",
-              title: "Alto",
-              bio: "",
-            },
+            { name: "Margjelë Krasniqi", title: "Alto", bio: "" },
+            { name: "Rite Hyseni", title: "Alto", bio: "" },
+            { name: "Vlera Firza", title: "Alto", bio: "" },
+            { name: "Erleta Elezkurtaj", title: "Alto", bio: "" },
+            { name: "Margarita Berisha", title: "Alto", bio: "" },
+            { name: "Magdalena Sedaj", title: "Alto", bio: "" },
           ],
         },
         {
           part: "Tenor",
           singers: [
-            {
-              name: "Erdonis Gashi",
-              title: "Tenor",
-              bio: "",
-            },
+            { name: "Atlantik Syla", title: "Tenor", bio: "" },
+            { name: "Edison Qyqalla", title: "Tenor", bio: "" },
+            { name: "Emanuel Gjergji", title: "Tenor", bio: "" },
+            { name: "Auron Deva", title: "Tenor", bio: "" },
           ],
         },
         {
           part: "Bas",
           singers: [
-            {
-              name: "Leon Ndou",
-              title: "Bas",
-              bio: "",
-            },
-            {
-              name: "Taulant Lleshi",
-              title: "Bas",
-              bio: "",
-            },
+            { name: "Leon Ndou", title: "Bas", bio: "" },
+            { name: "Ardit Hasani", title: "Bas", bio: "" },
+            { name: "Artan Quni", title: "Bas", bio: "" },
+            { name: "Taulant Lleshi", title: "Bas", bio: "" },
+            { name: "Mikel Berisha", title: "Bas", bio: "" },
           ],
         },
       ],
@@ -337,25 +307,9 @@ export const sq: Dictionary = {
       follow: "Ndiqeni rrugëtimin",
     },
     past: {
-      heading: "Të kaluara",
-      emptyText: "Një regjistër i koncerteve, bashkëpunimeve dhe incizimeve të fundit.",
-      concerts: [
-        {
-          title: "Nata e Hapjes",
-          meta: "Prishtinë · Mars 2026",
-          text: "Koncerti i parë publik i ansamblit, nga Josquin te Pärt.",
-        },
-        {
-          title: "Gjashtë Shekuj",
-          meta: "Prizren · Maj 2026",
-          text: "Një program i vetëm që përshkon muzikën korale nga viti 1500 deri sot.",
-        },
-        {
-          title: "Rezidenca e Verës",
-          meta: "Pejë · Korrik 2026",
-          text: "Tri mbrëmje me programe kamertale dhe prova të hapura.",
-        },
-      ],
+      heading: "Koncertet e kaluara",
+      emptyTitle: "Arkivi po merr formë.",
+      emptyText: "Koncertet dhe bashkëpunimet do të publikohen këtu ndërsa arkivi rritet.",
     },
     booking: {
       heading: "Rezervime",

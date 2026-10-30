@@ -32,7 +32,7 @@ export default async function Page({ params }: PageProps<"/[locale]">) {
         <Ensemble dict={dict} locale={locale} />
         <Foundation dict={dict} />
         <Repertoire dict={dict} />
-        <Events dict={dict} locale={locale} />
+        <Events dict={dict} />
       </main>
       <SiteFooter dict={dict} />
     </>
