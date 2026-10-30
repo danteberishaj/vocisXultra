@@ -27,6 +27,18 @@ type SingerCardProps = {
 export function SingerCard({ name, title, bio, portrait, toggleLabel }: SingerCardProps) {
   const [flipped, setFlipped] = useState(false);
 
+  if (!bio) {
+    return (
+      <div>
+        <div className="relative aspect-3/4 w-full overflow-hidden rounded-2xl bg-panel">
+          <Image src={portrait} alt="" fill sizes="(min-width: 1024px) 18rem, (min-width: 640px) 40vw, 85vw" className="object-cover" />
+        </div>
+        <p className="mt-4 font-display text-lg tracking-[-0.02em] text-ink">{name}</p>
+        <p className="mt-1.5 font-sans text-xs tracking-[0.18em] uppercase text-accent">{title}</p>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="flip aspect-3/4 w-full">

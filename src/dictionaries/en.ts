@@ -186,63 +186,33 @@ export const en = {
       rosterHeading: "The Singers",
       voices: [
         {
-          part: "Soprano",
-          singers: [
-            {
-              name: "Elife Podvorica Jashari",
-              title: "Vocal Coach",
-              bio: "",
-            },
-            {
-              name: "Diellza Dedushi",
-              title: "Soprano",
-              bio: "",
-            },
-            {
-              name: "Martina Lekaj",
-              title: "Soprano",
-              bio: "",
-            },
-            {
-              name: "Teuta Morina",
-              title: "Soprano",
-              bio: "",
-            },
-          ],
-        },
-        {
           part: "Alto",
           singers: [
-            {
-              name: "Blenda Kelmendi",
-              title: "Alto",
-              bio: "",
-            },
+            { name: "Margjelë Krasniqi", title: "Alto", bio: "" },
+            { name: "Rite Hyseni", title: "Alto", bio: "" },
+            { name: "Vlera Firza", title: "Alto", bio: "" },
+            { name: "Erleta Elezkurtaj", title: "Alto", bio: "" },
+            { name: "Margarita Berisha", title: "Alto", bio: "" },
+            { name: "Magdalena Sedaj", title: "Alto", bio: "" },
           ],
         },
         {
           part: "Tenor",
           singers: [
-            {
-              name: "Erdonis Gashi",
-              title: "Tenor",
-              bio: "",
-            },
+            { name: "Atlantik Syla", title: "Tenor", bio: "" },
+            { name: "Edison Qyqalla", title: "Tenor", bio: "" },
+            { name: "Emanuel Gjergji", title: "Tenor", bio: "" },
+            { name: "Auron Deva", title: "Tenor", bio: "" },
           ],
         },
         {
           part: "Bass",
           singers: [
-            {
-              name: "Leon Ndou",
-              title: "Bass",
-              bio: "",
-            },
-            {
-              name: "Taulant Lleshi",
-              title: "Bass",
-              bio: "",
-            },
+            { name: "Leon Ndou", title: "Bass", bio: "" },
+            { name: "Ardit Hasani", title: "Bass", bio: "" },
+            { name: "Artan Quni", title: "Bass", bio: "" },
+            { name: "Taulant Lleshi", title: "Bass", bio: "" },
+            { name: "Mikel Berisha", title: "Bass", bio: "" },
           ],
         },
       ],
@@ -341,25 +311,9 @@ export const en = {
       follow: "Follow the journey",
     },
     past: {
-      heading: "Past",
-      emptyText: "A record of recent concerts, collaborations and recordings.",
-      concerts: [
-        {
-          title: "Opening Night",
-          meta: "Prishtina · March 2026",
-          text: "The ensemble's first public concert, from Josquin to Pärt.",
-        },
-        {
-          title: "Six Centuries",
-          meta: "Prizren · May 2026",
-          text: "A single programme tracing choral music from 1500 to today.",
-        },
-        {
-          title: "Summer Residency",
-          meta: "Peja · July 2026",
-          text: "Three evenings of chamber programmes and open rehearsals.",
-        },
-      ],
+      heading: "Past concerts",
+      emptyTitle: "The archive is taking shape.",
+      emptyText: "Concerts and collaborations will be shared here as the archive grows.",
     },
     booking: {
       heading: "Bookings",

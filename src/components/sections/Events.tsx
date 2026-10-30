@@ -1,18 +1,10 @@
 import Image from "next/image";
 import { Reveal } from "@/components/Reveal";
-import { BookingForm } from "@/components/BookingForm";
-import { Marker, Section, SectionTitle, Statement } from "@/components/Layout";
+import { Marker, Section, SectionTitle } from "@/components/Layout";
 import { IconArrowUpRight } from "@/components/icons";
-import type { Locale } from "@/lib/locales";
 import type { Dictionary } from "@/dictionaries/en";
 
-const pastImages = [
-  "/images/past-1-faceless.png",
-  "/images/past-2-faceless.png",
-  "/images/past-3.webp",
-] as const;
-
-export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
+export function Events({ dict }: { dict: Dictionary }) {
   const ev = dict.events;
 
   return (
@@ -66,68 +58,19 @@ export function Events({ dict, locale }: { dict: Dictionary; locale: Locale }) {
       </div>
 
       <div id="past" className="mt-[clamp(3.5rem,9vh,6rem)] scroll-mt-24 border-t border-hairline pt-10">
-        <Reveal>
-          <div className="lg:flex lg:gap-16">
-            <Marker className="shrink-0 lg:w-48">{ev.past.heading}</Marker>
-            <p className="mt-4 max-w-[58ch] text-base leading-relaxed text-faint italic lg:mt-0">
-              {ev.past.emptyText}
+        <div className="grid gap-6 lg:grid-cols-12 lg:gap-16">
+          <Reveal className="lg:col-span-3">
+            <Marker>{ev.past.heading}</Marker>
+          </Reveal>
+          <Reveal delay={100} className="lg:col-span-9">
+            <p className="max-w-2xl font-display text-[clamp(1.6rem,3vw,2.5rem)] leading-[1.15] tracking-[-0.025em] text-ink text-balance">
+              {ev.past.emptyTitle}
             </p>
-          </div>
-        </Reveal>
-        {/* The performance archive */}
-        <ul className="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {ev.past.concerts.map((concert, i) => (
-            <li key={concert.title}>
-              <Reveal variant="fade" delay={i * 90}>
-                <article>
-                  <div className="relative aspect-4/3 w-full overflow-hidden rounded-2xl bg-panel">
-                    <Image
-                      src={pastImages[i]}
-                      alt={dict.a11y.pastImageAlts[i]}
-                      fill
-                      sizes="(min-width: 1024px) 24rem, (min-width: 640px) 45vw, 90vw"
-                      className="object-cover"
-                    />
-                  </div>
-                  <h4 className="mt-5 font-display text-xl tracking-[-0.02em] text-ink">
-                    {concert.title}
-                  </h4>
-                  <p className="mt-1.5 font-sans text-xs tracking-[0.18em] uppercase text-accent">
-                    {concert.meta}
-                  </p>
-                  <p className="mt-3 text-[0.95rem] leading-relaxed text-faint">{concert.text}</p>
-                </article>
-              </Reveal>
-            </li>
-          ))}
-        </ul>
+            <p className="mt-4 max-w-xl text-base leading-[1.75] text-faint">{ev.past.emptyText}</p>
+          </Reveal>
+        </div>
       </div>
 
-      {/* Bookings — the practical close */}
-      <div id="bookings" className="mt-[clamp(5rem,13vh,9rem)] grid scroll-mt-24 gap-12 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-5">
-          <Reveal>
-            <Statement className="max-w-[14ch]">{ev.booking.heading}</Statement>
-          </Reveal>
-          <Reveal delay={110}>
-            <p className="mt-6 max-w-md text-[1.05rem] leading-[1.7] text-faint">
-              {ev.booking.intro}
-            </p>
-          </Reveal>
-          <Reveal delay={200}>
-            <p className="mt-7 text-base text-faint italic">{ev.booking.note}</p>
-          </Reveal>
-        </div>
-        <div className="lg:col-span-6 lg:col-start-7">
-          <Reveal delay={120}>
-            <BookingForm
-              locale={locale}
-              labels={ev.booking.checklist}
-              form={ev.booking.form}
-            />
-          </Reveal>
-        </div>
-      </div>
     </Section>
   );
 }
